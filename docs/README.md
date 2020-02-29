@@ -143,6 +143,8 @@ Views **all** the tasks that you have currently in the Task List as a list. The 
 	+-----------------------------------------------------------------------------+
 	| Total: 3 tasks                                                              |
 	+-----------------------------------------------------------------------------+
+> **Note**:  The numbers to the left of each task is referred to as the task's *list number*.
+
 
 <br><br>
 
