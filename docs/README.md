@@ -2,8 +2,8 @@
 # User Guide  
    
 # Table of Contents
-- ## **Introduction**
-- **Features**
+- ### Introduction
+- ### Features
   1. Add a Task to your Task List  
     a. Add a To Do task to your Task List  
     b. Add a Deadline task to your Task List  
