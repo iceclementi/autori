@@ -1,7 +1,28 @@
 
 # User Guide  
    
-
+# Table of Contents
+- **Introduction**
+- **Features**
+  1. Add a Task to your Task List
+    a. Add a To Do task to your Task List
+    b. Add a Deadline task to your Task List
+    c. Add an Event task to your Task List
+  2. Mark a Task as Done
+  3. View all your Tasks
+  4. Delete a Task from your Task List
+  5. Filter Tasks from your Task List
+    a. Filter tasks from your Task List by a specified keyword
+    b. Filter tasks from your Task List by a specified time period
+- Miscellaneous Information
+  - Exiting the LumiChat Program
+  - Loading and Saving
+    - Loading
+    - Saving
+  - Date Time Formats
+    - Date Formats
+    - Time Formats
+    - Time Specifier Formats
 
 # Introduction
  
@@ -91,7 +112,7 @@ Adds a **Event** task to your Task List.
 <br><br>
 
 
-## 2. Mark Task as Done
+## 2. Mark a Task as Done
 Marks a **previously undone** task as *done*.
 
 ### <u>Usage </u>
@@ -183,7 +204,7 @@ Deletes a specified task from your Task List.  To avoid *accidental* deletion of
 
 <br><br>
 
-## 4. Filter Tasks from your Task List
+## 5. Filter Tasks from your Task List
 Filter tasks from your Task List either by a specified *keyword*, or by a specified *date time period*.
 
 ### <u>Usage </u>
