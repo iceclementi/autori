@@ -11,9 +11,9 @@
   2. Mark a Task as Done
   3. View all your Tasks
   4. Delete a Task from your Task List
-  5. Filter Tasks from your Task List
-    a. Filter tasks from your Task List by a specified keyword
-    b. Filter tasks from your Task List by a specified time period
+  5. Filter Tasks from your Task List  
+    a. Filter tasks from your Task List by a Specified Keyword  
+    b. Filter tasks from your Task List by a Specified Time Period  
 - Miscellaneous Information
   - Exiting the LumiChat Program
   - Loading and Saving
@@ -208,7 +208,7 @@ Deletes a specified task from your Task List.  To avoid *accidental* deletion of
 Filter tasks from your Task List either by a specified *keyword*, or by a specified *date time period*.
 
 ### <u>Usage </u>
-#### `a. find` - Filter tasks from your Task List by a specified keyword
+#### `a. find` - Filter tasks from your Task List by a Specified Keyword
 Filters tasks from your Task List that contains a specified *keyword*. 
 The *keyword* can contain multiple words and need not be complete words. The Task List is then filtered for tasks which *task description* matches the keyword. Filtering is done in a **non-case-sensitive** manner.
 **All matched** tasks will be shown as a *Search List*. The total number of tasks will be shown at the bottom of the list.
@@ -243,7 +243,7 @@ The *keyword* can contain multiple words and need not be complete words. The Tas
 
 <br>
 
-#### `b. due` - Filter tasks from your Task List by a specified time period
+#### `b. due` - Filter tasks from your Task List by a Specified Time Period
 Filters tasks from your Task List according to a specified *time period*.  
 A *time period* is defined by an <u>optional</u> *time specifier (e.g. on, before, after)* and a *date*. If the *time specifier* is left out, the *time period* is set to be **on** the *date* itself.
 The Task List is then filtered for **Deadline** and **Event** tasks which *date time* information matches the specified *time period*.  
