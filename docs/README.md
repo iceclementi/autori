@@ -4,10 +4,10 @@
 # Table of Contents
 - **Introduction**
 - **Features**
-  1. Add a Task to your Task List
-    a. Add a To Do task to your Task List
-    b. Add a Deadline task to your Task List
-    c. Add an Event task to your Task List
+  1. Add a Task to your Task List  
+    a. Add a To Do task to your Task List  
+    b. Add a Deadline task to your Task List  
+    c. Add an Event task to your Task List  
   2. Mark a Task as Done
   3. View all your Tasks
   4. Delete a Task from your Task List
