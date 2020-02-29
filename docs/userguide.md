@@ -1,14 +1,27 @@
 
 # User Guide  
+   
+
+
+# Introduction
+ 
+This Duke program is a Chat Box program named **LumiChat** that manages a list of user-created tasks.
   
+You will be interacting with the application via the command line with a virtual character called **Lumi**. Through the **LumiChat** program, you will be able to perform various operations to manage your tasks like adding, deleting and viewing tasks in a Task List.
   
-  
+There are 3 different types of tasks in the **LumiChat** program.
 #### <u>Types of tasks</u>
 | Task Type    | Description                                                             |  
 |:-------------|:------------------------------------------------------------------------|  
 | **To Do**    | A task that the you want to do with <u>no</u> *date time* restrictions. |  
 | **Deadline** | A task that you want to do <u>by</u> a certain *date time*              |  
 | **Event**    | A task that you want to do <u>at</u> a certain *date time*              |  
+
+This should cover most of the common task types in a normal daily life.
+  
+I hope that you will enjoy the use of the **LumiChat** program. **Have fun!!**
+
+<br><br>
 
 # Features   
 ## 1. Add a Task to your Task List  
@@ -245,9 +258,12 @@ The Task List is then filtered for **Deadline** and **Event** tasks which *date 
 
 # Miscellaneous Information
 
+
 ## Exiting the LumiChat Program
 Exiting the **LumiChat** program is simple. Simply enter `bye` to exit.
 Upon exiting, the program will [save](#saving) your Task List into a file in your device.
+
+<br>
 
 ## Loading and Saving
 The **LumiChat** program loads and saves your Task List **automatically**, so there is no explicit way to freely load or save your file.  
@@ -260,6 +276,8 @@ If the *task list file* is corrupted, an option will be given to **continue** th
 Saving is only done upon [exiting](#exiting-the-lumichat-program) the **LumiChat** program. The current tasks in your Task List will be saved into a *task list file* in your device.  
   
 Should there be an *unfortunate* error in saving your Task List, an option will be given to **continue** to exit the program **without** saving your Task List, or to **stay** in the program *(when you may then try to manually salvage the tasks in your Task List)*.
+
+<br>
 
 ## Date Time Formats
 Any *date time* data that you provide has to adhere to certain formats pre-defined by the **LumiChat** program. Failure to do so will likely result in the program to be unable to recognise your input command, and a warning will be shown.  
