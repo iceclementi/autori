@@ -2,7 +2,7 @@
 # User Guide  
    
 # Table of Contents
-- **Introduction**
+- ##**Introduction**
 - **Features**
   1. Add a Task to your Task List  
     a. Add a To Do task to your Task List  
