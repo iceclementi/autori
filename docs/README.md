@@ -7,15 +7,15 @@
 ### **Introduction** [&#10149;](#introduction)  
 ### **Features** [&#10149;](#features)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; 1. Add a Task to your Task List [&#10149;](#1-add-a-task-to-your-task-list)  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a To Do task to your Task List [&#10149;](#a-todo---add-a-to-do-task-to-your-task-list)  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Add a Deadline task to your Task List [&#10149;](#b-deadline---add-a-deadline-task-to-your-task-list)  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Add an Event task to your Task List [&#10149;](#c-event---add-a-event-task-to-your-task-list)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a To Do task to your Task List [&#10149;](#a-todo----add-a-to-do-task-to-your-task-list)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Add a Deadline task to your Task List [&#10149;](#b-deadline----add-a-deadline-task-to-your-task-list)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Add an Event task to your Task List [&#10149;](#c-event----add-a-event-task-to-your-task-list)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; 2. Mark a Task as Done [&#10149;](#2-mark-a-task-as-done)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; 3. View all your Tasks [&#10149;](#3-view-all-your-tasks)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; 4. Delete a Task from your Task List [&#10149;](#4-delete-a-task-from-your-task-list)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; 5. Filter Tasks from your Task List [&#10149;](#5-filter-tasks-from-your-task-list) 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Filter tasks from your Task List by a Specified Keyword [&#10149;](#a-find---filter-tasks-from-your-task-list-by-a-specified-keyword)  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Filter tasks from your Task List by a Specified Time Period [&#10149;](#b-due---filter-tasks-from-your-task-list-by-a-specified-time-period)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Filter tasks from your Task List by a Specified Keyword [&#10149;](#a-find----filter-tasks-from-your-task-list-by-a-specified-keyword)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Filter tasks from your Task List by a Specified Time Period [&#10149;](#b-due----filter-tasks-from-your-task-list-by-a-specified-time-period)  
 ### **Miscellaneous Information** [&#10149;](#miscellaneous-information)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Exiting the LumiChat Program** [&#10149;](#exiting-the-lumichat-program)
 #### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Loading and Saving** [&#10149;](#loading-and-saving)
@@ -353,7 +353,7 @@ Should there be an *unfortunate* error in saving your Task List, an option will 
 
 ## Date Time Formats
 Any *date time* data that you provide has to adhere to certain formats pre-defined by the **LumiChat** program. Failure to do so will likely result in the program to be unable to recognise your input command, and a warning will be shown.  
-Instances when you may need to enter a *date time* will be when [adding a **Deadline**](#b-deadline---add-a-deadline-task-to-your-task-list) or [**Event**](#c-event---add-a-event-task-to-your-task-list) task, or [filtering the Task List by a *time period*](#b-due---filter-tasks-from-your-task-list-by-a-specified-time-period).
+Instances when you may need to enter a *date time* will be when [adding a **Deadline**](#b-deadline----add-a-deadline-task-to-your-task-list) or [**Event**](#c-event----add-a-event-task-to-your-task-list) task, or [filtering the Task List by a *time period*](#b-due---filter-tasks-from-your-task-list-by-a-specified-time-period).
   
 Here are the following *date time* formats.
   
@@ -403,7 +403,7 @@ An **exhaustive** list of the *time* formats is given below for your reference.
 ```
 
 ### Time Specifier Formats
-The *time specifier* is used in conjunction with a *date* to define the *time period* to [filter tasks in the Task List](#b-due---filter-tasks-from-your-task-list-by-a-specified-time-period). The following words are considered valid *time specifiers* in the **LumiChat** program.
+The *time specifier* is used in conjunction with a *date* to define the *time period* to [filter tasks in the Task List](#b-due----filter-tasks-from-your-task-list-by-a-specified-time-period). The following words are considered valid *time specifiers* in the **LumiChat** program.
 - `on` -- <u>on</u> the specified *date*
 - `after` or `a` -- <u>after</u> the specified *date*
 - `before` or `b` -- <u>before</u> the specified *date*
