@@ -3,27 +3,27 @@
 <br>
    
 # Table of Contents
-### **Introduction**  
-### **Features**  
-#### &nbsp; &nbsp; &nbsp; &nbsp; **1. Add a Task to your Task List**  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a To Do task to your Task List  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Add a Deadline task to your Task List  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Add an Event task to your Task List  
-#### &nbsp; &nbsp; &nbsp; &nbsp; 2. Mark a Task as Done  
-#### &nbsp; &nbsp; &nbsp; &nbsp; 3. View all your Tasks  
-#### &nbsp; &nbsp; &nbsp; &nbsp; 4. Delete a Task from your Task List  
-#### &nbsp; &nbsp; &nbsp; &nbsp; 5. Filter Tasks from your Task List 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Filter tasks from your Task List by a Specified Keyword  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Filter tasks from your Task List by a Specified Time Period  
-### **Miscellaneous Information**  
-#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Exiting the LumiChat Program**
-#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Loading and Saving**
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Loading  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Saving  
-#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Date Time Formats**
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Date Formats  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Time Formats  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Time Specifier Formats  
+### **Introduction** [&#10149;](#introduction-1)  
+### **Features** [&#10149;](#features-1)  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 1. Add a Task to your Task List [&#10149;](#1-add-a-task-to-your-task-list)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a To Do task to your Task List [&#10149;](#a-todo----add-a-to-do-task-to-your-task-list)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Add a Deadline task to your Task List [&#10149;](#b-deadline----add-a-deadline-task-to-your-task-list)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Add an Event task to your Task List [&#10149;](#c-event----add-a-event-task-to-your-task-list)  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 2. Mark a Task as Done [&#10149;](#2-mark-a-task-as-done)  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 3. View all your Tasks [&#10149;](#3-view-all-your-tasks)  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 4. Delete a Task from your Task List [&#10149;](#4-delete-a-task-from-your-task-list)  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 5. Filter Tasks from your Task List [&#10149;](#5-filter-tasks-from-your-task-list) 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Filter tasks from your Task List by a Specified Keyword [&#10149;](#a-find----filter-tasks-from-your-task-list-by-a-specified-keyword)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Filter tasks from your Task List by a Specified Time Period [&#10149;](#b-due---filter-tasks-from-your-task-list-by-a-specified-time-period)  
+### **Miscellaneous Information** [&#10149;](#miscellaneous-information-1)  
+#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Exiting the LumiChat Program** [&#10149;](#exiting-the-lumichat-program)
+#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Loading and Saving** [&#10149;](#loading-and-saving)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Loading [&#10149;](#loading)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Saving [&#10149;](#saving)  
+#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Date Time Formats** [&#10149;](#date-time-formats)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Date Formats [&#10149;](#date-formats)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Time Formats [&#10149;](#time-formats)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Time Specifier Formats [&#10149;](#time-specifier-formats)  
 
 <br>
 
