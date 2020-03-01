@@ -9,21 +9,21 @@
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a To Do task to your Task List  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Add a Deadline task to your Task List  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Add an Event task to your Task List  
-#### &nbsp; &nbsp; &nbsp; &nbsp; **2. Mark a Task as Done**  
-#### &nbsp; &nbsp; &nbsp; &nbsp;**3. View all your Tasks**  
-#### &nbsp; &nbsp; &nbsp; &nbsp;**4. Delete a Task from your Task List**  
-#### &nbsp; &nbsp; &nbsp; &nbsp;**5. Filter Tasks from your Task List**  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 2. Mark a Task as Done  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 3. View all your Tasks  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 4. Delete a Task from your Task List  
+#### &nbsp; &nbsp; &nbsp; &nbsp; 5. Filter Tasks from your Task List 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Filter tasks from your Task List by a Specified Keyword  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Filter tasks from your Task List by a Specified Time Period  
 ### **Miscellaneous Information**  
-  - **Exiting the LumiChat Program**
-  - **Loading and Saving**
-    - Loading
-    - Saving
-  - **Date Time Formats**
-    - Date Formats
-    - Time Formats
-    - Time Specifier Formats
+#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Exiting the LumiChat Program**
+#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Loading and Saving**
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Loading  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Saving  
+#### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Date Time Formats**
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Date Formats  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Time Formats  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Time Specifier Formats  
 
 <br>
 
@@ -36,7 +36,7 @@ There are 3 different types of tasks in the **LumiChat** program.
 
 #### <u>Types of tasks</u>
 | Task Type    | Description                                                             |  
-|:-------------|:------------------------------------------------------------------------|  
+|--------------|-------------------------------------------------------------------------|  
 | **To Do**    | A task that the you want to do with <u>no</u> *date time* restrictions. |  
 | **Deadline** | A task that you want to do <u>by</u> a certain *date time*              |  
 | **Event**    | A task that you want to do <u>at</u> a certain *date time*              |  
