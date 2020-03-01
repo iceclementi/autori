@@ -261,7 +261,7 @@ The *keyword* can contain multiple words and need not be complete words. The Tas
 
 <br>
 
-#### b. `due` - Filter tasks from your Task List by a Specified Time Period
+#### b. `due` -- Filter tasks from your Task List by a Specified Time Period
 Filters tasks from your Task List according to a specified *time period*.  
 A *time period* is defined by an <u>optional</u> *time specifier (e.g. on, before, after)* and a *date*. If the *time specifier* is left out, the *time period* is set to be **on** the *date* itself.
 The Task List is then filtered for **Deadline** and **Event** tasks which *date time* information matches the specified *time period*.  
@@ -270,8 +270,8 @@ The Task List is then filtered for **Deadline** and **Event** tasks which *date 
 
 #### Format  
 `due <time specifier> <date>`  
-- `time specifier` - The  <u>optional</u> *time specifier* to define the *time period* to filter the Task List
-- `date` - The *date* to define the *time period* to filter the Task List
+- `time specifier` -- The  <u>optional</u> *time specifier* to define the *time period* to filter the Task List
+- `date` -- The *date* to define the *time period* to filter the Task List
 
 > **Note**: The `time specifier` and `date` provided must adhere to the set of accepted [Date Time formats](#date-time-formats).
 
