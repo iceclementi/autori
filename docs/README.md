@@ -194,7 +194,7 @@ Deletes a specified task from your Task List.  To avoid *accidental* deletion of
 `delete <list number>`  
 - `list number` -- The *list number* of the task to be deleted
   
-  > You may find the *list number* of the task by [viewing the list](#view-all-your-tasks).
+  > You may find the *list number* of the task by [viewing the list](#3-view-all-your-tasks).
 
 #### Example Usage  
 	 delete 1
@@ -257,7 +257,7 @@ The *keyword* can contain multiple words and need not be complete words. The Tas
 	  ʘᗜʘ Sure! Lumi searches your list...
 	  ʘoʘ? Huh? Lumi is not able to find anything...
 
-> **Note**: This may occur due to a mistype in the *keyword*. To confirm that no such tasks with the specified *keyword* exists, you may want to [view all your tasks](#view-all-your-tasks) to check.
+> **Note**: This may occur due to a mistype in the *keyword*. To confirm that no such tasks with the specified *keyword* exists, you may want to [view all your tasks](#3-view-all-your-tasks) to check.
 
 <br>
 
