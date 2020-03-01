@@ -35,39 +35,8 @@ You will be interacting with the application via the command line with a virtual
   
 There are 3 different types of tasks in the **LumiChat** program.
 
-Todo | Deadline | Event
------|----------|------
-No associated date | To be done by a specified date | To be done at a specified date
-
-<br>
-
-Todo               | Deadline                       | Event
--------------------|--------------------------------|-------------------------------
-No associated date | To be done by a specified date | To be done at a specified date
-
-<br>
-
-|Todo | Deadline | Event|
-|-----|----------|------|
-|No associated date | To be done by a specified date | To be done at a specified date|
-
-<br>
-
-|Todo               | Deadline                       | Event                         |
-|-------------------|--------------------------------|-------------------------------|
-|No associated date | To be done by a specified date | To be done at a specified date|
-
-#### <u>Types of tasks</u>
-| Task Type    | Description                                                             |
-|--------------|-------------------------------------------------------------------------|
-| <b>To Do</b>    | A task that the you want to do with <u>no</u> *date time* restrictions. |
-| <b>Deadline</b> | A task that you want to do <u>by</u> a certain *date time*              |
-| **Event**    | A task that you want to do <u>at</u> a certain *date time*              |
-
-<br>
-
-| Task Type    | Description                                                             |
-|--------------|-------------------------------------------------------------------------|
+| Task Type       | Description                                                             |
+|-----------------|-------------------------------------------------------------------------|
 | <b>To Do</b>    | A task that the you want to do with <u>no</u> *date time* restrictions. |
 | <b>Deadline</b> | A task that you want to do <u>by</u> a certain *date time*              |
 | <b>Event</b>    | A task that you want to do <u>at</u> a certain *date time*              |
