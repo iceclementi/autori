@@ -130,7 +130,7 @@ Marks a **previously undone** task as *done*.
 #### `done` -- Mark a task as done
 Marks a specified task as *done*.
   > **Note**: If you try to mark an already done task as *done*, you will receive a **warning** message from **Lumi**.
-  > 
+
 #### Format  
 `done <list number>`  
 - `list number` -- The *list number* of the task to be marked as done.
@@ -269,18 +269,18 @@ The Task List is then filtered for **Deadline** and **Event** tasks which *date 
 > **Note**: The list is arranged according to the order in which you have added your tasks. 
 
 #### Format  
-`due (<time specifier>) <date>`  
+`due <time specifier> <date>`  
 - `time specifier` - The  <u>optional</u> *time specifier* to define the *time period* to filter the Task List
 - `date` - The *date* to define the *time period* to filter the Task List
 
 > **Note**: The `time specifier` and `date` provided must adhere to the set of accepted [Date Time formats](#date-time-formats).
 
 #### Example Usage  
-<u>With *time specifier*</u>
+<u>With <i>time specifier</i></u>
 
 	 due after tmr
 
-<u>Without *time specifier*</u>
+<u>Without <i>time specifier</i></u>
 
 	 due today
 	 
