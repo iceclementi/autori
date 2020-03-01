@@ -3,7 +3,7 @@
 <br>
    
 # Table of Contents
-### **Introduction** [&#10149;](#introduction-1)  
+### **Introduction** [&#10149;](#introduction)  
 ### **Features** [&#10149;](#features-1)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; 1. Add a Task to your Task List [&#10149;](#1-add-a-task-to-your-task-list)  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a To Do task to your Task List [&#10149;](#a-todo----add-a-to-do-task-to-your-task-list)  
@@ -15,7 +15,7 @@
 #### &nbsp; &nbsp; &nbsp; &nbsp; 5. Filter Tasks from your Task List [&#10149;](#5-filter-tasks-from-your-task-list) 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Filter tasks from your Task List by a Specified Keyword [&#10149;](#a-find----filter-tasks-from-your-task-list-by-a-specified-keyword)  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Filter tasks from your Task List by a Specified Time Period [&#10149;](#b-due---filter-tasks-from-your-task-list-by-a-specified-time-period)  
-### **Miscellaneous Information** [&#10149;](#miscellaneous-information-1)  
+### **Miscellaneous Information** [&#10149;](#miscellaneous-information)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Exiting the LumiChat Program** [&#10149;](#exiting-the-lumichat-program)
 #### &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Loading and Saving** [&#10149;](#loading-and-saving)
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9702; Loading [&#10149;](#loading)  
