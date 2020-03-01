@@ -58,11 +58,19 @@ No associated date | To be done by a specified date | To be done at a specified 
 |No associated date | To be done by a specified date | To be done at a specified date|
 
 #### <u>Types of tasks</u>
-| Task Type    | Description                                                             |  
-|--------------|-------------------------------------------------------------------------|  
-| **To Do**    | A task that the you want to do with <u>no</u> *date time* restrictions. |  
-| **Deadline** | A task that you want to do <u>by</u> a certain *date time*              |  
-| **Event**    | A task that you want to do <u>at</u> a certain *date time*              |  
+| Task Type    | Description                                                             |
+|--------------|-------------------------------------------------------------------------|
+| <b>To Do</b>    | A task that the you want to do with <u>no</u> *date time* restrictions. |
+| <b>Deadline</b> | A task that you want to do <u>by</u> a certain *date time*              |
+| **Event**    | A task that you want to do <u>at</u> a certain *date time*              |
+
+<br>
+
+| Task Type    | Description                                                             |
+|--------------|-------------------------------------------------------------------------|
+| <b>To Do</b>    | A task that the you want to do with <u>no</u> *date time* restrictions. |
+| <b>Deadline</b> | A task that you want to do <u>by</u> a certain *date time*              |
+| <b>Event</b>    | A task that you want to do <u>at</u> a certain *date time*              |
 
 This should cover most of the common task types in a normal daily life.
   
