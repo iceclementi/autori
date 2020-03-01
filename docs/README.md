@@ -35,6 +35,28 @@ You will be interacting with the application via the command line with a virtual
   
 There are 3 different types of tasks in the **LumiChat** program.
 
+Todo | Deadline | Event
+-----|----------|------
+No associated date | To be done by a specified date | To be done at a specified date
+
+<br>
+
+Todo               | Deadline                       | Event
+-------------------|--------------------------------|-------------------------------
+No associated date | To be done by a specified date | To be done at a specified date
+
+<br>
+
+|Todo | Deadline | Event|
+|-----|----------|------|
+|No associated date | To be done by a specified date | To be done at a specified date|
+
+<br>
+
+|Todo               | Deadline                       | Event                         |
+|-------------------|--------------------------------|-------------------------------|
+|No associated date | To be done by a specified date | To be done at a specified date|
+
 #### <u>Types of tasks</u>
 | Task Type    | Description                                                             |  
 |--------------|-------------------------------------------------------------------------|  
