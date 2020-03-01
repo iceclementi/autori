@@ -1,10 +1,11 @@
+
 # **Duke User Guide**
 
 <br>
    
 # Table of Contents
 ### **Introduction** [&#10149;](#introduction)  
-### **Features** [&#10149;](#features-1)  
+### **Features** [&#10149;](#features)  
 #### &nbsp; &nbsp; &nbsp; &nbsp; 1. Add a Task to your Task List [&#10149;](#1-add-a-task-to-your-task-list)  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a To Do task to your Task List [&#10149;](#a-todo----add-a-to-do-task-to-your-task-list)  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Add a Deadline task to your Task List [&#10149;](#b-deadline----add-a-deadline-task-to-your-task-list)  
@@ -224,7 +225,7 @@ Deletes a specified task from your Task List.  To avoid *accidental* deletion of
 Filter tasks from your Task List either by a specified *keyword*, or by a specified *date time period*.
 
 ### <u>Usage </u>
-#### `a. find` -- Filter tasks from your Task List by a Specified Keyword
+#### a. `find` -- Filter tasks from your Task List by a Specified Keyword
 Filters tasks from your Task List that contains a specified *keyword*. 
 The *keyword* can contain multiple words and need not be complete words. The Task List is then filtered for tasks which *task description* matches the keyword. Filtering is done in a **non-case-sensitive** manner.
 **All matched** tasks will be shown as a *Search List*. The total number of tasks will be shown at the bottom of the list.
@@ -260,7 +261,7 @@ The *keyword* can contain multiple words and need not be complete words. The Tas
 
 <br>
 
-#### `b. due` - Filter tasks from your Task List by a Specified Time Period
+#### b. `due` - Filter tasks from your Task List by a Specified Time Period
 Filters tasks from your Task List according to a specified *time period*.  
 A *time period* is defined by an <u>optional</u> *time specifier (e.g. on, before, after)* and a *date*. If the *time specifier* is left out, the *time period* is set to be **on** the *date* itself.
 The Task List is then filtered for **Deadline** and **Event** tasks which *date time* information matches the specified *time period*.  
