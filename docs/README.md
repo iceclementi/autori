@@ -25,14 +25,14 @@
 ## **Introduction**  
 
 ### **Purpose**  
-<div style="text-align: justify">
+<span style="display:block; text-align: justify">
 This document describes the structure and software design decisions for the <b>Nuke</b> application. The <b>Nuke</b> application is a simple yet powerful task management application that is dedicated to providing <b>NUS students</b> efficient organisation of <i>modules</i> and <i>tasks</i>.  
-</div>
+</span>
     
 ### **Scope**  
-<div style="text-align: justify">
+<span style="display:block; text-align: justify">
 This document will cover the structure and software design decisions for the implementation of <b>Nuke</b>. The intended audience for this document are developers, designers and software testers of <b>Nuke</b> <i>or</i> other similar task management application.
-</div>  
+</span>  
 
 ### **Design Goals**  
 
@@ -64,14 +64,13 @@ Refer to the guide [here](#) to set up.
 This section will describe the significant details on how certain features in <b>Nuke</b> are being implemented.  
 </span>
 
-### 1. Add Feature
+### **1. Add Feature**  
 
 <br>
 
-### 2. Delete Feature  
+### **2. Delete Feature**  
 #### Overview  
 <span style="display:block; text-align: justify">
-<span>
 The <b>delete</b> feature deletes *modules*, *categories* and *tasks* from the Module, Category and Task List respectively.   
 When the user first requests to execute the <b>delete</b> command *(assuming the command format given is valid)* to delete a directory by providing its name, the application will first filter for matching directory names. From here, there are <b>three</b> possible outcomes:  
 1. There are <b>no</b> matches --  Nothing is deleted.
@@ -93,16 +92,28 @@ The above-stated three classes [overrides](#) the `executeInitialDelete()` metho
 
 <br>  
 
+<span style="display:block; text-align: justify">
 The `DeleteCommand` class in turn extends the `FilterCommand` abstract class. The `FilterCommandClass` contains the following vital methods for filtering:  
 - `createFilteredModuleList()` -- Creates an `ArrayList` of the filtered *modules*.  
 - `createFilteredCategoryist()` -- Creates an `ArrayList` of the filtered *categories*.  
 - `createFilteredTaskList()` -- Creates an `ArrayList`of the filtered *tasks*.  
+</span>
 
+<br>
+
+<span style="display:block; text-align: justify">
 Lastly, the `FilterCommand` class extends the abstract `Command` class that contains the `execute()` method to execute the actual **delete** command.  
+</span>
+
 <br>  
+
+<span style="display:block; text-align: justify">
 Other than the commands, two prompts are involved.   
 The prompt to request for the list number(s) of the item(s) to delete from the filtered list is managed by the `ListNumberPrompt` class. The prompt to request to confirm the deletion is managed by the `DeleteConfirmationPrompt` class.  
+</span>
+
 <br>
+
 Below are the class-diagrams for the involved classes:  
 
 ```
@@ -111,8 +122,10 @@ Below are the class-diagrams for the involved classes:
 ```
 
 #### Example Usage  
+<span style="display:block; text-align: justify">
 The deletion process for *modules*, *categories* and *tasks* are similar. In this example, the deletion process for *tasks* will be illustrated as a series of steps.  <br>
 James is a user and wants to delete some of his *tasks* with *description* "work". Assume that he has the current Task List:  
+</span>
 ```
 +--------------------------------------------------------------------------------------------------+
  NO |  MODULE  |       CATEGORY       |          TASK          |           DEADLINE           | PTY 
@@ -128,10 +141,13 @@ Total tasks: 5
 
 ```   
 
+<span style="display:block; text-align: justify">
 1. James will first enter the command to delete *tasks*:  
 	`delt work -a`  
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
+</span>
 
+<span style="display:block; text-align: justify">
 2. James receives the following prompt:
 	```  
 	Multiple matching tasks found.
@@ -148,8 +164,11 @@ Total tasks: 5
 	Enter the list number(s) of the tasks to delete.
 	```  
 	He proceeds to enter list numbers `2 3` as he has already completed both *tasks*.  
-	After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, which will prepare the prompt for the delete confirmation, and then calls `ListNumberPrompt#executePromptConfirmation()`.
+	After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, which will prepare the prompt for the delete confirmation, and then calls `ListNumberPrompt#executePromptConfirmation()`.  
+</span>
 
+
+<span style="display:block; text-align: justify">
 3. James receives another prompt:  
 	```  
 	Confirm delete these tasks?
@@ -158,12 +177,15 @@ Total tasks: 5
 	```  
 	He enters `y` to confirm the deletion.
 	`DeleteConfirmationPrompt#execute()` will be called, which then calls `DeleteConfirmationPrompt#executeMultipleDelete(filteredList)` to delete James' selected *tasks* from his Task List.
+</span>	
 
+<span style="display:block; text-align: justify">
 4. James receives the final message:
 	```
 	SUCCESS!! Task(s) have been deleted.
 	```
 	Deletion process ends.   
+</span>
 
 <br>  
 
