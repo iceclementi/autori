@@ -146,8 +146,6 @@ Total tasks: 5
 	`delt work -a`  
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
 	
-<br>
-	
 2. James receives the following prompt:
 	```  
 	Multiple matching tasks found.
@@ -166,8 +164,6 @@ Total tasks: 5
 	He proceeds to enter list numbers `2 3` as he has already completed both *tasks*.  
 	After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, which will prepare the prompt for the delete confirmation, and then calls `ListNumberPrompt#executePromptConfirmation()`.  
 
-<br>
-
 3. James receives another prompt:  
 	```  
 	Confirm delete these tasks?
@@ -176,8 +172,6 @@ Total tasks: 5
 	```  
 	He enters `y` to confirm the deletion.
 	`DeleteConfirmationPrompt#execute()` will be called, which then calls `DeleteConfirmationPrompt#executeMultipleDelete(filteredList)` to delete James' selected *tasks* from his Task List.
-
-<br>
 
 4. James receives the final message:
 	```
