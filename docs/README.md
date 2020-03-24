@@ -60,7 +60,9 @@ Refer to the guide [here](#) to set up.
 <br>
 
 ## **Implementation**  
+<span style="display:block; text-align: justify">
 This section will describe the significant details on how certain features in <b>Nuke</b> are being implemented.  
+</span>
 
 ### 1. Add Feature
 
@@ -68,7 +70,7 @@ This section will describe the significant details on how certain features in <b
 
 ### 2. Delete Feature  
 #### Overview  
-<div style="text-align: justify">
+<span style="display:block; text-align: justify">
 <span>
 The <b>delete</b> feature deletes *modules*, *categories* and *tasks* from the Module, Category and Task List respectively.   
 When the user first requests to execute the <b>delete</b> command *(assuming the command format given is valid)* to delete a directory by providing its name, the application will first filter for matching directory names. From here, there are <b>three</b> possible outcomes:  
@@ -76,15 +78,20 @@ When the user first requests to execute the <b>delete</b> command *(assuming the
 2. There is <b>one</b> match -- A prompt will be given to the user to confirm the deletion.
 3. There are <b>multiple</b> matches -- The list of matches will be shown to the user, and the user chooses which ones to delete. A further prompt will be given to confirm the deletion(s).
 </span>
-</div>
 
 #### Feature Implementation  
 
-<span>
-This feature is facilitated by the `DeleteModuleCommand`, `DeleteCategoryCommand` and `DeleteTaskCommand`, classes which deletes the corresponding *modules*, *categories* and *tasks* respectively.</span> <br>  
+<span style="display:block; text-align: justify">
+This feature is facilitated by the `DeleteModuleCommand`, `DeleteCategoryCommand` and `DeleteTaskCommand`, classes which deletes the corresponding *modules*, *categories* and *tasks* respectively.
+</span> 
+
+<br>  
 
 <span style="display:block; text-align: justify">
-The above-stated three classes [overrides](#) the `executeInitialDelete()` method which extends from the abstract `DeleteCommand` class. The `executeInitialDelete()` method's role is to prepare the necessary messages or prompts for the user depending on the number of filtered matches.k</span> <br>  
+The above-stated three classes [overrides](#) the `executeInitialDelete()` method which extends from the abstract `DeleteCommand` class. The `executeInitialDelete()` method's role is to prepare the necessary messages or prompts for the user depending on the number of filtered matches.
+</span>
+
+<br>  
 
 The `DeleteCommand` class in turn extends the `FilterCommand` abstract class. The `FilterCommandClass` contains the following vital methods for filtering:  
 - `createFilteredModuleList()` -- Creates an `ArrayList` of the filtered *modules*.  
