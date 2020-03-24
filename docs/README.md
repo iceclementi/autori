@@ -19,7 +19,7 @@
   
 ## Introduction  
 ### Purpose  
-<div>
+<div style="text-align: justify">
 This document describes the structure and software design decisions for the <b>Nuke</b> application. The <b>Nuke</b> application is a simple yet powerful task management application that is dedicated to providing <b>NUS students</b> efficient organisation of <i>modules</i> and <i>tasks</i>.  
 </div>
     
