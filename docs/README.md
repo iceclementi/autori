@@ -1,3 +1,85 @@
+# **Nuke Developer Guide** <small>v1.5</small>  
+  
+<br>  
+     
+## Table of Contents  
+<big style="color: green">**Introduction** [&#10149;](#introduction)  </big>  
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Purpose** [&#10149;](#purpose)   
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Scope** [&#10149;](#scope)   
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Design Goals** [&#10149;](#design-goals)   
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Definitions** [&#10149;](#definitions)   
+<big style="color: green"> **Setting Up** [&#10149;](#setting-up)  </big>
+<big style="color: green">  **Design** [&#10149;](#design)  </big>  
+<big style="color: green"> **Implementation** [&#10149;](#implementation)  </big>  
+<big style="color: green"> **Testing** [&#10149;](#testing)  </big>  
+<big style="color: green"> **Glossary** [&#10149;](#glossary)  </big>  
+<big style="color: green"> **Appendix** [&#10149;](#appendix)  </big>  
+  
+<br>  
+  
+## Introduction  
+### Purpose  
+<div>
+This document describes the structure and software design decisions for the <b>Nuke</b> application. The <b>Nuke</b> application is a simple yet powerful task management application that is dedicated to providing <b>NUS students</b> efficient organisation of <i>modules</i> and <i>tasks</i>.  
+</div>
+    
+### Scope  
+This describes the the structure and software design decisions for the implementation of **Nuke**. The intended audience for this document are developers, designers and software testers of **Nuke** *or* other similar task management application.  
+
+### Design Goals  
+
+<br>
+
+### Definitions  
+
+<br>
+
+## Setting Up  
+
+<br>
+
+## Design  
+
+<br>
+
+## Implementation  
+
+<br>
+
+## Testing  
+
+<br>
+
+## Glossary  
+
+<br>
+
+## Appendix  
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # **Duke User Guide**
 
