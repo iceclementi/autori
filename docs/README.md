@@ -178,11 +178,12 @@ Total tasks: 5
 	SUCCESS!! Task(s) have been deleted.
 	```
 	Deletion process ends.   
-</span>
 
 <br>  
 
+<span style="display:block; text-align: justify">
 Below is a *sequence diagram* to illustrate the above example scenario.  
+</span>
 ```
 	// To do Sequence diagram here
 ```
