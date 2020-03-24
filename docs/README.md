@@ -4,7 +4,7 @@
 <br>
    
 # Table of Contents  
-<big>**Introduction** [&#10149;](#introduction)  </big>  
+<big style="color: green"> [**Introduction**](#introduction)  </big>  
 <big> **Setting Up** [&#10149;](#setting-up)  </big>  
 <big> **Design** [&#10149;](#design)  </big>  
 <big style="color: green"> **Implementation** [&#10149;](#implementation)  </big>     
