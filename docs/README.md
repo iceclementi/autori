@@ -68,12 +68,14 @@ This section will describe the significant details on how certain features in <b
 
 ### 2. Delete Feature  
 #### Overview  
-<div style="text-align: justify" markdown=1>
+<div style="text-align: justify">
+<span>
 The <b>delete</b> feature deletes *modules*, *categories* and *tasks* from the Module, Category and Task List respectively.   
 When the user first requests to execute the <b>delete</b> command *(assuming the command format given is valid)* to delete a directory by providing its name, the application will first filter for matching directory names. From here, there are <b>three</b> possible outcomes:  
 1. There are <b>no</b> matches --  Nothing is deleted.
 2. There is <b>one</b> match -- A prompt will be given to the user to confirm the deletion.
 3. There are <b>multiple</b> matches -- The list of matches will be shown to the user, and the user chooses which ones to delete. A further prompt will be given to confirm the deletion(s).
+</span>
 </div>
 
 #### Feature Implementation  
