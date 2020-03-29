@@ -1,3 +1,19 @@
+<style type="text/css">
+.image-right {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+
+.image-left {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+</style>
+
 
 # **Nuke Developer Guide** <small>v1.5</small>  
 
@@ -28,13 +44,13 @@ By: `CS2113T-T13-2`      Since: `Feb 2020`
 ## **Introduction**  
 
 ### **Purpose**  
-<span style="text-align: justify">
+<span style="text-align: justify; display: block">
 This document describes the structure and software design decisions for the <b>Nuke</b> application. The <b>Nuke</b> application is a simple yet powerful task management application that is dedicated to providing <b>NUS students</b> a more efficient way to organise their <i>modules</i> and <i>tasks</i>.  
 </span>
     
 
 ### **Scope**  
-<span style="text-align: justify">
+<span style="text-align: justify; display: block">
 This document will cover the structure and software design decisions for the implementation of <b>Nuke</b>. The intended audience for this document are developers, designers and software testers of <b>Nuke</b> <i>or</i> other similar task management application.
 </span>  
 
@@ -296,7 +312,8 @@ Total tasks: 5
 +--------------------------------------------------------------------------------------------------+
 ```
 
-1. James will first enter the command to delete *tasks*:  
+![Step 1](images/Number_1.png){: .image-left } 
+James will first enter the command to delete *tasks*:  
 	`delt work -a`  
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
 
