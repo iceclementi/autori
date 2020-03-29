@@ -324,7 +324,6 @@ James will first enter the command to delete *tasks*:
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
 
 ![Step 2](images/Number_2.png){: .image-left .step } 
-<br>
 James receives the following prompt:
 
 ```  
