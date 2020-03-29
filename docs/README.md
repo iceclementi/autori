@@ -342,20 +342,20 @@ After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, wh
 
 ![Step 3](images/Number_3.png){: .image-left .step} 
 James receives another prompt:  
-	```  
-	Confirm delete these tasks?
-	tutorial worksheet 10
-	Big Lab Work
-	```
-	He enters `y` to confirm the deletion.
-	`DeleteConfirmationPrompt#execute()` will be called, which then calls `DeleteConfirmationPrompt#executeMultipleDelete(filteredList)` to delete James' selected *tasks* from his Task List.
+```  
+Confirm delete these tasks?
+tutorial worksheet 10
+Big Lab Work
+```
+He enters `y` to confirm the deletion.
+`DeleteConfirmationPrompt#execute()` will be called, which then calls `DeleteConfirmationPrompt#executeMultipleDelete(filteredList)` to delete James' selected *tasks* from his Task List.
 
 ![Step 4](images/Number_4.png){: .image-left .step} 
 James receives the final message:
-	```
-	SUCCESS!! Task(s) have been deleted.
-	```
-	Deletion process ends.  
+```
+SUCCESS!! Task(s) have been deleted.
+```
+Deletion process ends.  
 
 <br>
 
