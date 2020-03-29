@@ -312,7 +312,7 @@ Total tasks: 5
 +--------------------------------------------------------------------------------------------------+
 ```
 
-![Step 1](images/Number_1.png){: .image-left } 
+![Step 1](images/Number_1.png =100){: .image-left } 
 <br>
 James will first enter the command to delete *tasks*:  
 	`delt work -a`  
