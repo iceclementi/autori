@@ -312,13 +312,13 @@ Total tasks: 5
 +--------------------------------------------------------------------------------------------------+
 ```
 
-![Step 1](images/Number_1.png =100){: .image-left } 
+![Step 1](images/Number_1.png =100px){: .image-left } 
 <br>
 James will first enter the command to delete *tasks*:  
 	`delt work -a`  
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
 
-![Step 2](images/Number_2.png =100){: .image-left } 
+![Step 2](images/Number_2.png =100px){: .image-left } 
 <br>
 James receives the following prompt:
 ```  
@@ -338,7 +338,7 @@ Enter the list number(s) of the tasks to delete.
 He proceeds to enter list numbers `2 3` as he has already completed both *tasks*.  
 After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, which will prepare the prompt for the delete confirmation, and then calls `ListNumberPrompt#executePromptConfirmation()`.
 
-![Step 3](images/Number_3.png =100){: .image-left } 
+![Step 3](images/Number_3.png =100px){: .image-left } 
 <br>
 James receives another prompt:  
 	```  
@@ -349,7 +349,7 @@ James receives another prompt:
 	He enters `y` to confirm the deletion.
 	`DeleteConfirmationPrompt#execute()` will be called, which then calls `DeleteConfirmationPrompt#executeMultipleDelete(filteredList)` to delete James' selected *tasks* from his Task List.
 
-![Step 4](images/Number_4.png =100){: .image-left } 
+![Step 4](images/Number_4.png =100px){: .image-left } 
 <br>
 James receives the final message:
 	```
