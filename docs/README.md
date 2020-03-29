@@ -318,25 +318,29 @@ James will first enter the command to delete *tasks*:
 	`delt work -a`  
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
 
-2. James receives the following prompt:
-	```  
-	Multiple matching tasks found.
-	+--------------------------------------------------------------------------------------------------+
-	 NO |  MODULE  |       CATEGORY       |          TASK          |           DEADLINE           | PTY 
-	+--------------------------------------------------------------------------------------------------+
-	 1  |  CS1231  |      Assignment      |       group work       |      28/03/2020 06:00PM      | 20  
-	 2  |  CS2113  |      Bigger Lab      |      Big Lab Work      |        today 06:00PM         |  7  
-	 3  |  CS2113  |       Tutorial       | tutorial worksheet 10  |        today 12:00PM         |  5  
-	+--------------------------------------------------------------------------------------------------+
-	Total tasks: 3
-	+--------------------------------------------------------------------------------------------------+
+![Step 2](images/Number_2.png =100){: .image-left } 
+<br>
+James receives the following prompt:
+```  
+Multiple matching tasks found.
++--------------------------------------------------------------------------------------------------+
+ NO |  MODULE  |       CATEGORY       |          TASK          |           DEADLINE           | PTY 
++--------------------------------------------------------------------------------------------------+
+ 1  |  CS1231  |      Assignment      |       group work       |      28/03/2020 06:00PM      | 20  
+ 2  |  CS2113  |      Bigger Lab      |      Big Lab Work      |        today 06:00PM         |  7  
+ 3  |  CS2113  |       Tutorial       | tutorial worksheet 10  |        today 12:00PM         |  5  
++--------------------------------------------------------------------------------------------------+
+Total tasks: 3
++--------------------------------------------------------------------------------------------------+
 
-	Enter the list number(s) of the tasks to delete.
-	```
-	He proceeds to enter list numbers `2 3` as he has already completed both *tasks*.  
-	After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, which will prepare the prompt for the delete confirmation, and then calls `ListNumberPrompt#executePromptConfirmation()`.
+Enter the list number(s) of the tasks to delete.
+```
+He proceeds to enter list numbers `2 3` as he has already completed both *tasks*.  
+After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, which will prepare the prompt for the delete confirmation, and then calls `ListNumberPrompt#executePromptConfirmation()`.
 
-3. James receives another prompt:  
+![Step 3](images/Number_3.png =100){: .image-left } 
+<br>
+James receives another prompt:  
 	```  
 	Confirm delete these tasks?
 	tutorial worksheet 10
@@ -345,7 +349,9 @@ James will first enter the command to delete *tasks*:
 	He enters `y` to confirm the deletion.
 	`DeleteConfirmationPrompt#execute()` will be called, which then calls `DeleteConfirmationPrompt#executeMultipleDelete(filteredList)` to delete James' selected *tasks* from his Task List.
 
-4. James receives the final message:
+![Step 4](images/Number_4.png =100){: .image-left } 
+<br>
+James receives the final message:
 	```
 	SUCCESS!! Task(s) have been deleted.
 	```
