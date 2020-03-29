@@ -1,7 +1,8 @@
+
 # **Nuke Developer Guide** <small>v1.5</small>  
 
-By: `CS2113T-T13-2`      Since: `Feb 2020`    
-[Go to Webpage](https://ay1920s2-cs2113t-t13-2.github.io/tp/DeveloperGuide.html)
+By: `CS2113T-T13-2`      Since: `Feb 2020`    
+<small>[Go to Webpage](https://ay1920s2-cs2113t-t13-2.github.io/tp/DeveloperGuide.html)</small>
 
 
 ## **Table of Contents**  
@@ -28,7 +29,7 @@ By: `CS2113T-T13-2`      Since: `Feb 2020`
 
 ### **Purpose**  
 <span style="text-align: justify">
-This document describes the structure and software design decisions for the <b>Nuke</b> application. The <b>Nuke</b> application is a simple yet powerful task management application that is dedicated to providing <b>NUS students</b> efficient organisation of <i>modules</i> and <i>tasks</i>.  
+This document describes the structure and software design decisions for the <b>Nuke</b> application. The <b>Nuke</b> application is a simple yet powerful task management application that is dedicated to providing <b>NUS students</b> a more efficient way to organise their <i>modules</i> and <i>tasks</i>.  
 </span>
     
 
@@ -60,7 +61,7 @@ Refer to the guide [here](#) to set up.
 <br>
 
 ## **Implementation**  
-This section will describe the significant details on how certain features in <b>Nuke</b> are being implemented.  
+This section will describe the significant details of how certain features in <b>Nuke</b> are being implemented.  
 
 ### 1. Add Feature
 #### Overview
@@ -146,7 +147,7 @@ Below is a *sequence diagram* to illustrate the above example scenario.
 
 
 
-#### 1.2. Add category/task feature
+#### 1.2. Add Category and Task Features
 
 Since add category and add task feature are implemented in a similar pattern, they can be explained together.
 
@@ -243,17 +244,21 @@ to-do: add the sequence diagram
 ### 2. Delete Feature  
 #### Overview  
 The **delete** feature deletes *modules*, *categories* and *tasks* from the Module, Category and Task List respectively.   
-When the user first requests to execute the **delete** command *(assuming the command format given is valid)* to delete a directory by providing its name, the application will first filter for matching directory names. From here, there are **three** possible outcomes:  
+When the user first requests to execute the **delete** command to delete a directory by providing its name, the application will first filter for directories with matching names. From here, there are **three** possible outcomes:  
 
 1. There are **no** matches --  Nothing is deleted.
 2. There is **one** match -- A prompt will be given to the user to confirm the deletion.
 3. There are **multiple** matches -- The list of matches will be shown to the user, and the user chooses which ones to delete. A further prompt will be given to confirm the deletion(s).
 
 #### Feature Implementation  
+![Delete Command Class Diagram](images/Delete_Command_Class_Diagram.png)
+<span style="color: green"><small><i>Figure <b>Delete Command Class Diagram</b></i></small></span>
 
-This feature is facilitated by the `DeleteModuleCommand`, `DeleteCategoryCommand` and `DeleteTaskCommand`, classes which deletes the corresponding *modules*, *categories* and *tasks* respectively. <br>  
+<br>
 
-The above-stated three classes [overrides](#) the `executeInitialDelete()` method which extends from the abstract `DeleteCommand` class. The `executeInitialDelete()` method's role is to prepare the necessary messages or prompts for the user depending on the number of filtered matches. <br>  
+The `DeleteModuleCommand`, `DeleteCategoryCommand` and `DeleteTaskCommand` classes in the application facilitates this **delete** feature. They are in charge of deleting *modules*, *categories* and *tasks* respectively. <br>  
+
+As shown in the figure above, those three classes each extends from the abstract `DeleteCommand` class.  They also [override](#) the `DeleteCommand` class's `executeInitialDelete()` method, which role is to prepare the necessary messages or prompts for the user depending on the number of filtered matches. <br>  
 
 The `DeleteCommand` class in turn extends the `FilterCommand` abstract class. The `FilterCommandClass` contains the following vital methods for filtering:  
 - `createFilteredModuleList()` -- Creates an `ArrayList` of the filtered *modules*.  
@@ -262,18 +267,15 @@ The `DeleteCommand` class in turn extends the `FilterCommand` abstract class. Th
 
 Lastly, the `FilterCommand` class extends the abstract `Command` class that contains the `execute()` method to execute the actual **delete** command.  
 <br>  
-Other than the commands, two prompts are involved.   
-The prompt to request for the list number(s) of the item(s) to delete from the filtered list is managed by the `ListNumberPrompt` class. The prompt to request to confirm the deletion is managed by the `DeleteConfirmationPrompt` class.  
-<br>
-Below are the class-diagrams for the involved classes:  
-
-![Delete Command Class Diagram](images/Delete_Command_Class_Diagram.png)
-<span style="color: green"><small><i>Figure <b>Delete Command Class Diagram</b></i></small></span>
-
-<br>  
 
 ![Prompt Command Class Diagram](images/Prompt_Class_Diagram.png)
 <span style="color: green"><small><i>Figure <b>Prompt Command Class Diagram</b></i></small></span>
+
+<br> 
+
+Other than the commands, two prompts are involved.   
+The prompt to request for the list number(s) of the item(s) to delete from the filtered list is managed by the `ListNumberPrompt` class. The prompt to request to confirm the deletion is managed by the `DeleteConfirmationPrompt` class.  
+<br>
 
 
 #### Example Usage  
@@ -292,7 +294,6 @@ James is a user and wants to delete some of his *tasks* with *description* "work
 +--------------------------------------------------------------------------------------------------+
 Total tasks: 5
 +--------------------------------------------------------------------------------------------------+
-
 ```
 
 1. James will first enter the command to delete *tasks*:  
