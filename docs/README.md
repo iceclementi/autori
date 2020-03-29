@@ -1,7 +1,7 @@
 <style type="text/css">
 .image-right {
   display: block;
-  margin-left: auto;
+  margin-left: 10px;
   margin-right: auto;
   float: right;
 }
@@ -9,7 +9,7 @@
 .image-left {
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 10px;
   float: left;
 }
 </style>
@@ -313,6 +313,7 @@ Total tasks: 5
 ```
 
 ![Step 1](images/Number_1.png){: .image-left } 
+<br>
 James will first enter the command to delete *tasks*:  
 	`delt work -a`  
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
