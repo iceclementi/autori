@@ -15,7 +15,7 @@
 }
 
 .step {
-  width: 50px;
+  width: 35px;
 }
 </style>
 
