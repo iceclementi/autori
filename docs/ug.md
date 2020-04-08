@@ -552,7 +552,7 @@ However, you must choose between sorting by <i>deadline</i> <i><u>or</u></i> by 
 <small><u><b>Sort by Deadline</b></u></small>  
 ![lsts command sort by deadline](images/lsts_deadline.png)    
 <br>  
-<small><u><b>Sort by Priority/b></u></small>   
+<small><u><b>Sort by Priority</b></u></small>   
 ![lsts command sort by priority](images/lsts_priority.png)  
 
 
@@ -568,12 +568,12 @@ The filtered <i>tasks</i> are then shown as a list.
 
 <div class="alert alert-info">
 <i class="fa fa-info"></i> <b>Info</b> <br> 
-As a bonus, you can also filter for <b>overdue</b> <i>tasks</i>. Simply enter `due over` to do so! &#128521;
+As a bonus, you can also filter for <b>overdue</b> <i>tasks</i>. Simply enter <code>due over</code> to do so! &#128521;
 </div>
 
 ##### **Format**  
 `due <time specifier> <date>`  
-- `time specifier` -- The  <u>optional</u> <b>time specifier</b> to define the <i>time period</i> to filter the <i>tasks</i>   
+- `time specifier` -- The  <u>optional</u> <i>time specifier</i> to define the <i>time period</i> to filter the <i>tasks</i>   
 - `date` -- The <i>date</i> to define the <i>time period</i> to filter the <i>tasks</i>   
 
 <div class="alert alert-warning">
@@ -585,7 +585,7 @@ The <code>time specifier</code> and <code>date</code> that you provide must adhe
 <small><u><b>With Time Specifier</b></u></small>  
 ![due command with time specifier](images/due_timespec.png)    
 <br>  
-<small><u><b>Without Time Specifier/b></u></small>   
+<small><u><b>Without Time Specifier</b></u></small>   
 ![due command without time specifier](images/due_no_timespec.png)   
 <br>  
 <small><u><b>Overdue</b></u></small>   
