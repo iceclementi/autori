@@ -469,7 +469,7 @@ The above commands have to be done in their corresponding directories. On the ot
 
 <div class="alert alert-info">
 <i class="fa fa-info"></i> <b>Info</b> <br> 
-Both <b>List</b> commands <i>(with the exception of <b><a href="#d-list-your-tasks-sorted-by-deadline-or-priority">List your Tasks Sorted by Deadline or Priority</a></b> and <b><b><a href="#e-list-your-tasks-at-specified-time-period">List your Tasks at Specified Time Period</a></b>)</i> and <b><a href="#3-delete">Delete</a></b> commands function by first filtering the relevant items from the <i>keywords</i> that you provide. You can further choose to enter <code>-e</code> to filter using the <b><i>exact</i></b> <i>keyword</i>, and <code>-a</code> to filter across <b><i>all</i></b> the directories. <br>  
+Both <b>List</b> commands <i>(with the exception of <b><a href="#d-list-your-tasks-sorted-by-deadline-or-priority">List your Tasks Sorted by Deadline or Priority</a></b> and <b><a href="#e-list-your-tasks-at-specified-time-period">List your Tasks at Specified Time Period</a></b>)</i> and <b><a href="#3-delete">Delete</a></b> commands function by first filtering the relevant items from the <i>keywords</i> that you provide. You can further choose to enter <code>-e</code> to filter using the <b><i>exact</i></b> <i>keyword</i>, and <code>-a</code> to filter across <b><i>all</i></b> the directories. <br>  
 For more information on how filtering is done, see <a href="#how-does-the-filtering-process-works">here</a>.
 </div>   
 
