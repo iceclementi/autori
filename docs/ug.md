@@ -30,7 +30,6 @@
   color: #a94442;
 }
 </style>
-
 # **Nuke User Guide** <small>v2.1</small>     
 
 By: `CS2113T-T13-2`      Since: `Feb 2020`    
@@ -128,7 +127,18 @@ The **Nuke** application adheres to this Directory Tree structure strictly. It i
 Normally, you would need to enter the full _directory path_ in order to add and delete _modules_, _categories_, _tasks_ and _files_. To make the process more efficient, **Nuke** enables you to traverse about the various directories via the [Change Directory](#6-change-directory) command so that you can add and delete the corresponding items directly without having to enter the full _directory path_.
 
 
-<div class="alert alert-warning"><b>Tip:</b> Use red boxes (alert-info) for tips and notes.</div>
+<div class="alert alert-warning">
+<b>Note</b> <br> 
+The <b>Nuke</b> application adheres to this Directory Tree structure strictly. It is important to note that you can only add a directory into a directory which is <b><i>exactly</i> one level lower</b>. <br>
+For example, you can only add a <i>task</i> into the <b>Category</b> directory, and not directly into the <b>Module</b> directory.
+</div>
+<br>
+<div class="alert alert-info">
+<b>Tip</b> <br> 
+You can shorten the commands you enter by first entering into a directory. Then you do <b>not</b> need to enter the full <i>directory path</i> in your command! <br>
+To learn how to traverse the various directories, see the <a href="#6-change-directory">Change Directory</a> command.
+</div>
+
 <br>
 
 ## Command Format  
