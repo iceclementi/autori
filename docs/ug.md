@@ -1,4 +1,10 @@
+<link rel="stylesheet" href="node_modules/octicons/build/font/octicons.css"></link>
+
 <style type="text/css">
+div {
+	text-align: justify;
+}
+
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -128,13 +134,14 @@ Normally, you would need to enter the full _directory path_ in order to add and 
 
 
 <div class="alert alert-warning">
-<b>Note</b> <br> 
+<i class="octicon octicon-alert"></i>
+<b><big>Note</big></b> <br> 
 The <b>Nuke</b> application adheres to this Directory Tree structure strictly. It is important to note that you can only add a directory into a directory which is <b><i>exactly</i> one level lower</b>. <br>
 For example, you can only add a <i>task</i> into the <b>Category</b> directory, and not directly into the <b>Module</b> directory.
 </div>
-<br>
+
 <div class="alert alert-info">
-<b>Tip</b> <br> 
+<i class="octicon octicon-info"></i><b><big>Tip</big></b> <br> 
 You can shorten the commands you enter by first entering into a directory. Then you do <b>not</b> need to enter the full <i>directory path</i> in your command! <br>
 To learn how to traverse the various directories, see the <a href="#6-change-directory">Change Directory</a> command.
 </div>
@@ -143,7 +150,7 @@ To learn how to traverse the various directories, see the <a href="#6-change-dir
 
 ## Command Format  
 In this User Guide, the format for each feature _(command)_ will usually be of this form:  
-`CommandWord <attribute0> -Prefix1 <attribute1> ... [ -Prefix2 <attribute2> ... ]`
+`CommandWord <attr0> -pfix1 <attr1> ... [ -pfix2 <attr2> ... ] { -pfix3 <attr3> -pfix4 <attr4> ... }`
 
 ### Command Word
 Each command you give to **Nuke** has to begin with its corresponding unique **command word**. This helps **Nuke** to know that you want it to execute a particular command.
@@ -157,6 +164,9 @@ A **prefix** is used to provide additional supplementary information to the comm
 ### Optional
 Some **attributes** and **prefixes** are _optional_ and the command can still execute properly even when omitted. However, they may be useful if you want to provide a more specific information to the command. Optional **attributes** and **prefixes** will be wrapped in square brackets `[ ]` to help you to recognise them.
 
+### Any
+There are times when you may have to include at least one from a set of **attributes** and **prefixes**. You may choose to include one <i>or</i> more from the set, but <b>not</b> none of them. Such **attributes** and **prefixes** will be wrapped in curly brackets `{ }` to help you to recognise them.
+
 <br>
 
 ## Command Prefixes  
@@ -167,15 +177,21 @@ All **command prefixes** in **Nuke** begins with a `-` and followed by a **lette
 
 | Command Prefix | General Definition                                               |
 |:--------------:|------------------------------------------------------------------|
-| `-m`           | The _module code_ of the _module_                                |
-| `-c`           | The _name_ of the _category_                                     |
-| `-t`           | The _description_ of the _task_                                  |
-| `-f`           | The _path_ of the _file_                                         |
-| `-d`           | The _deadline_ of the _task_                                     |
-| `-p`           | The _priority_ of the _category_ or _task_                       |
-| `-e`           | To indicate whether filtering is done **exactly**                |
-| `-a`           | To indicate whether filtering is done across **all directories** |
+| `-m`           | The _module code_ of the _**m**odule_                            |
+| `-c`           | The _name_ of the _**c**ategory_                                 |
+| `-t`           | The _description_ of the _**t**ask_                              |
+| `-f`           | The _name_ or _path_ of the _**f**ile_                           |
+| `-d`           | The _**d**eadline_ of the _task_                                 |
+| `-p`           | The _**p**riority_ of the _category_ or _task_                   |
+| `-e`           | To indicate whether filtering is done **e**xactly                |
+| `-a`           | To indicate whether filtering is done across **a**ll directories |
 
+
+<div class="alert alert-warning">
+<i class="octicon octicon-alert"></i><b><big>Note</big></b> <br> 
+Because each <b>prefix</b> begins with a <code>-</code>, <b>Nuke</b> has to unfortunately restrict your choice of names for the directories. <br>
+Specifically, each word in the name of your directory has to begin with a alpha-numeric <i>(i.e. non-symbol)</i> or underscore character.
+</div>
 <br><br>  
 
 # Features  
