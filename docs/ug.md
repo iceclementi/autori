@@ -1,9 +1,11 @@
+<style type="text/css">
 .alert {  
 padding:  20px;  
 background-color:  #f44336;  /* Red */  
 color:  white;  
 margin-bottom:  15px;  
 }
+</style>
 
 # **Nuke User Guide** <small>v2.1</small>     
 
