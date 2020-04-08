@@ -1,9 +1,33 @@
 <style type="text/css">
-.alert {  
-padding:  20px;  
-background-color:  #f44336;  /* Red */  
-color:  white;  
-margin-bottom:  15px;  
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+	
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
 }
 </style>
 
@@ -104,7 +128,7 @@ The **Nuke** application adheres to this Directory Tree structure strictly. It i
 Normally, you would need to enter the full _directory path_ in order to add and delete _modules_, _categories_, _tasks_ and _files_. To make the process more efficient, **Nuke** enables you to traverse about the various directories via the [Change Directory](#6-change-directory) command so that you can add and delete the corresponding items directly without having to enter the full _directory path_.
 
 
-<div class="alert"><b>Tip:</b> Use red boxes (alert-info) for tips and notes.</div>
+<div class="alert alert-warning"><b>Tip:</b> Use red boxes (alert-info) for tips and notes.</div>
 <br>
 
 ## Command Format  
