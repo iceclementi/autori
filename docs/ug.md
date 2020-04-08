@@ -1,4 +1,9 @@
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nuke User Guide v2.1</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
 
 <style type="text/css">
 div {
@@ -107,7 +112,8 @@ This section will explain the fundamental structure of the **Nuke** application,
 | **Root**        | The **base** of the Directory Tree. Only **one** root exists in the entire Tree.<br>Added _modules_ are in this level. |
 | **Module**      | The **second** level of the Directory Tree.<br>Added _categories_ are in this level.   |
 | **Category**    | The **third** level of the Directory Tree.<br>Added _tasks_ are in this level.    |
-| **Task**        | The **last** level of the Directory Tree.<br>Added _files_ are in this level.       |
+| **Task**        | The **fourth** level of the Directory Tree.<br>Added _files_ are in this level.       |
+| **File**        | The **last** level of the Directory Tree.<br>Nothing else can be added.                                         |
 
 <br>
 
@@ -117,7 +123,11 @@ This section will explain the fundamental structure of the **Nuke** application,
 
 #### Root   
 The **Root** Directory is the **base** of the entire Directory Tree. Only **one** root exists in the entire Tree. _Modules_ are added into this level into a **Module List**. A _module_ consists of both a *module code* and a _module title_. 
-> **Note**: Only **NUS modules** are allowed to be added in **Nuke**.  
+
+<div class="alert alert-warning">
+<i class="fa fa-exclamation"></i> <b><big>Note</big></b> <br> 
+Only <b>NUS modules</b> are allowed to be added in <b>Nuke</b>.  
+</div>
 
 #### Module
 The **Module** Directory is the **second** level of the Directory Tree.  Each _module_ has a **Category List** that has several _categories_ to categorise your _tasks_, such as Lecture, Tutorial and Assignment, so that you can further organise your _tasks_. A _category_ consists of a _name_ and a _priority_ to indicate the importance of the _tasks_ in that _category_.
@@ -125,13 +135,11 @@ The **Module** Directory is the **second** level of the Directory Tree.  Each _m
 #### Category
 The **Category** Directory is the **third** level of the Directory Tree. Each _category_ has a **Task List** that can contain any number of _tasks_, which are ideally related to the _category_. A _task_ has several attributes, namely the _description_, _deadline_ of the _task_ if any, _priority_ and the _done status_ of the _task_.
 
-### Task
-The **Task** Directory is the **last** level of the Directory Tree. Each _task_ can have _files_ attached to the it. _Files_ are stored in the **File List**. The _file_ must have a _file name_ and the _path_ to the _file_.
+#### Task
+The **Task** Directory is the **fourth** level of the Directory Tree. Each _task_ can have _files_ attached to the it. _Files_ are stored in the **File List**. The _file_ must have a _file name_ and the _path_ to the _file_.   
 
-##### <u>Other Notes</u>
-The **Nuke** application adheres to this Directory Tree structure strictly. It is important to note that you can only add a directory into a directory which is **_exactly_ one level lower**. For example, you can only add a _task_ into the **Category** directory, and not directly into the **Module** directory.<br>
-Normally, you would need to enter the full _directory path_ in order to add and delete _modules_, _categories_, _tasks_ and _files_. To make the process more efficient, **Nuke** enables you to traverse about the various directories via the [Change Directory](#6-change-directory) command so that you can add and delete the corresponding items directly without having to enter the full _directory path_.
-
+#### File
+The **File** Directory is the **last** level of the Directory Tree. It contains no other directories.   
 
 <div class="alert alert-warning">
 <i class="fa fa-exclamation"></i> <b><big>Note</big></b> <br> 
@@ -152,25 +160,25 @@ In this User Guide, the format for each feature _(command)_ will usually be of t
 `CommandWord <attr0> -pfix1 <attr1> ... [ -pfix2 <attr2> ... ] { -pfix3 <attr3> -pfix4 <attr4> ... }`
 
 ### Command Word
-Each command you give to **Nuke** has to begin with its corresponding unique **command word**. This helps **Nuke** to know that you want it to execute a particular command.
+Each command you give to **Nuke** has to begin with its corresponding unique **command word**. This helps **Nuke** to know that you want it to execute a particular command.  
 
 ### Attribute
-**Attributes** are information to be provided in the command. An **attribute** for the command will be wrapped in angular brackets `< >` to help you to recognise it.
+**Attributes** are information to be provided in the command. An **attribute** for the command will be wrapped in angular brackets `< >` to help you to recognise it.   
 
 ### Prefix
-A **prefix** is used to provide additional supplementary information to the command. More information on the various **command prefixes** can be found [here](#command-prefixes).
+A **prefix** is used to provide additional supplementary information to the command. More information on the various **command prefixes** can be found [here](#command-prefixes).   
 
 ### Optional
-Some **attributes** and **prefixes** are _optional_ and the command can still execute properly even when omitted. However, they may be useful if you want to provide a more specific information to the command. Optional **attributes** and **prefixes** will be wrapped in square brackets `[ ]` to help you to recognise them.
+Some **attributes** and **prefixes** are _optional_ and the command can still execute properly even when omitted. However, they may be useful if you want to provide a more specific information to the command. Optional **attributes** and **prefixes** will be wrapped in square brackets `[ ]` to help you to recognise them.   
 
 ### Any
-There are times when you may have to include at least one from a set of **attributes** and **prefixes**. You may choose to include one <i>or</i> more from the set, but <b>not</b> none of them. Such **attributes** and **prefixes** will be wrapped in curly brackets `{ }` to help you to recognise them.
+There are times when you may have to include at least one from a set of **attributes** and **prefixes**. You may choose to include one <i>or</i> more from the set, but <b>not</b> none of them. Such **attributes** and **prefixes** will be wrapped in curly brackets `{ }` to help you to recognise them.   
 
 <br>
 
 ## Command Prefixes  
-On many occasions, you may be required to enter more information to describe the commands you give to **Nuke**. For example, when adding a _task_, you may need to specify the _module_ and _category_ to add the _task_ into. You may also want to include additional attributes such as the _deadline_ and _priority_. All these information can only be recognised by **Nuke** if they are preceded by the correct **prefix**.<br>  
-All **command prefixes** in **Nuke** begins with a `-` and followed by a **letter**. Below is the exhaustive list of **command prefixes** and general information that should follow after. 
+On many occasions, you may be required to enter more information to describe the commands you give to **Nuke**. For example, when adding a _task_, you may need to specify the _module_ and _category_ to add the _task_ into. You may also want to include additional attributes such as the _deadline_ and _priority_. All these information can only be recognised by **Nuke** if they are preceded by the correct **prefix**.<br>   
+All **command prefixes** in **Nuke** begins with a `-` and followed by a **letter**. Below is the exhaustive list of **command prefixes** and general information that should follow after.   
 
 #### <u>Command Prefix Table</u>  
 
@@ -185,19 +193,21 @@ All **command prefixes** in **Nuke** begins with a `-` and followed by a **lette
 | `-e`           | To indicate whether filtering is done **e**xactly                |
 | `-a`           | To indicate whether filtering is done across **a**ll directories |
 
+<br>
 
 <div class="alert alert-warning">
-<i class="octicon octicon-alert"></i><b><big>Note</big></b> <br> 
+<i class="fa fa-exclamation">  </i><b><big>Note</big></b> <br> 
 Because each <b>prefix</b> begins with a <code>-</code>, <b>Nuke</b> has to unfortunately restrict your choice of names for the directories. <br>
 Specifically, each word in the name of your directory has to begin with a alpha-numeric <i>(i.e. non-symbol)</i> or underscore character.
 </div>
+
 <br><br>  
 
 # Features  
 ## 1. Add  
-Adds a _module_, _category_ or _task_ into their respective lists.<br>
+Adds a _module_, _category_,  _task_ or <i>file</i> into their respective lists.<br>
 
-As mentioned previously, **Nuke** follows the structure of a **Directory Tree** _(i.e. folder sub-folder structure)_. Therefore, **Nuke** also supports Linux file-system-related command for creating a directory: `mkdir`
+As mentioned previously, **Nuke** follows the structure of a [**Directory Tree**](#nuke-structure) _(i.e. folder sub-folder structure)_. Therefore, **Nuke** also supports Linux file-system-related command for creating a directory: `mkdir`
 
 - When you are at the **Root Directory**, `mkdir <module code>` will add a *module* into your **Module List**.
 - When you are at the **Module Directory**, `mkdir <category name>` will add a _category_ into your **Category List**.
