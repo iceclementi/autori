@@ -1,3 +1,10 @@
+.alert {  
+padding:  20px;  
+background-color:  #f44336;  /* Red */  
+color:  white;  
+margin-bottom:  15px;  
+}
+
 # **Nuke User Guide** <small>v2.1</small>     
 
 By: `CS2113T-T13-2`      Since: `Feb 2020`    
@@ -95,7 +102,7 @@ The **Nuke** application adheres to this Directory Tree structure strictly. It i
 Normally, you would need to enter the full _directory path_ in order to add and delete _modules_, _categories_, _tasks_ and _files_. To make the process more efficient, **Nuke** enables you to traverse about the various directories via the [Change Directory](#6-change-directory) command so that you can add and delete the corresponding items directly without having to enter the full _directory path_.
 
 
-<div class="alert alert-block alert-info"><b>Tip:</b> Use blue boxes (alert-info) for tips and notes.</div>
+<div class="alert"><b>Tip:</b> Use red boxes (alert-info) for tips and notes.</div>
 <br>
 
 ## Command Format  
