@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Nuke User Guide v2.1</title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <style type="text/css">
@@ -124,7 +124,7 @@ This section will explain the fundamental structure of the **Nuke** application,
 The **Root** Directory is the **base** of the entire Directory Tree. Only **one** root exists in the entire Tree. _Modules_ are added into this level into a **Module List**. A _module_ consists of both a *module code* and a _module title_. 
 
 <div class="alert alert-warning">
-<i class="fa fa-exclamation"></i> <b>Note</b> <br> 
+<i class="fa fa-exclamation"></i> <b>Note !!</b> <br> 
 Only <b>NUS modules</b> are allowed to be added in <b>Nuke</b>.  
 </div>
 
