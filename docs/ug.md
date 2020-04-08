@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="UTF-8">
     <title>Nuke User Guide v2.1</title>
@@ -125,7 +124,7 @@ This section will explain the fundamental structure of the **Nuke** application,
 The **Root** Directory is the **base** of the entire Directory Tree. Only **one** root exists in the entire Tree. _Modules_ are added into this level into a **Module List**. A _module_ consists of both a *module code* and a _module title_. 
 
 <div class="alert alert-warning">
-<i class="fa fa-exclamation"></i> <b><big>Note</big></b> <br> 
+<i class="fa fa-exclamation"></i> <b>Note</b> <br> 
 Only <b>NUS modules</b> are allowed to be added in <b>Nuke</b>.  
 </div>
 
@@ -142,13 +141,13 @@ The **Task** Directory is the **fourth** level of the Directory Tree. Each _task
 The **File** Directory is the **last** level of the Directory Tree. It contains no other directories.   
 
 <div class="alert alert-warning">
-<i class="fa fa-exclamation"></i> <b><big>Note</big></b> <br> 
+<i class="fa fa-exclamation"></i> <b>Note</b> <br> 
 The <b>Nuke</b> application adheres to this Directory Tree structure strictly. It is important to note that you can only add a directory into a directory which is <b><i>exactly</i> one level lower</b>. <br>
 For example, you can only add a <i>task</i> into the <b>Category</b> directory, and not directly into the <b>Module</b> directory.
 </div>
 
 <div class="alert alert-info">
-<i class="fa fa-info"></i> <b><big>Tip</big></b> <br> 
+<i class="fa fa-info"></i> <b>Tip</b> <br> 
 You can shorten the commands you enter by first entering into a directory. Then you do <b>not</b> need to enter the full <i>directory path</i> in your command! <br>
 To learn how to traverse the various directories, see the <a href="#6-change-directory">Change Directory</a> command.
 </div>
@@ -196,7 +195,7 @@ All **command prefixes** in **Nuke** begins with a `-` and followed by a **lette
 <br>
 
 <div class="alert alert-warning">
-<i class="fa fa-exclamation">  </i><b><big>Note</big></b> <br> 
+<i class="fa fa-exclamation">  </i><b>Note</b> <br> 
 Because each <b>prefix</b> begins with a <code>-</code>, <b>Nuke</b> has to unfortunately restrict your choice of names for the directories. <br>
 Specifically, each word in the name of your directory has to begin with a alpha-numeric <i>(i.e. non-symbol)</i> or underscore character.
 </div>
