@@ -8,11 +8,11 @@ By: `CS2113T-T13-2`      Since: `Feb 2020`
 
 <big style="color: green">**Introduction** [&#10149;](#introduction)  </big>   
 <br> <big style="color: green"> **Setting Up** [&#10149;](#setting-up)  </big>
-<br> <big style="color: green"> **General Usage** [&#10149;](#general-usage)  </big>
+<br> <big style="color: green"> **General Usage** [&#10149;](#general-usage)  </big>   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Nuke Structure** [&#10149;](#user-stories)   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Command Format** [&#10149;](#command-format)   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Command Prefixes** [&#10149;](#command-prefixes)   
-<br> <big style="color: green">**Features** [&#10149;](#features)  </big>
+<br> <big style="color: green">**Features** [&#10149;](#features)  </big>      
 &nbsp; &nbsp; &nbsp; &nbsp;  **1. Add** [&#10149;](#1-add)  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Add a Module into your Module List [&#10149;](#a-add-a-module-into-your-module-list)    
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Add a Category into your Category List [&#10149;](#b-add-a-category-into-your-category-list)    
@@ -43,29 +43,26 @@ By: `CS2113T-T13-2`      Since: `Feb 2020`
 <br>  <big style="color: green"> **Command Summary** [&#10149;](#command-summary) </big>   
 <br>  <big style="color: green"> **FAQ** [&#10149;](#faq) </big>   
 
-# Table of Contents   
-### **Features** [&#10149;](#features)  
-
-
-
 <br>  
 
-# Introduction  
-This **Nuke** application is a simple yet powerful task management system that is dedicated to providing **NUS students** efficient organisation of _modules_ and _tasks_.<br>  
+## **Introduction**  
+<span style="text-align: justify; display: block">
+This **Nuke** application is a simple yet powerful task management system that is dedicated to providing **NUS students** a more efficient way to organise their _modules_ and _tasks_.<br>  
 You will be interacting with the application via the command line. With the **Nuke** application, you will be able to perform various operations to manage your _modules_ and _tasks_ such as adding, deleting and listing your  _modules_ and _tasks_. You may also add additional properties to your _tasks_ such as _files_, _deadlines_, and _priorities_.<br>  
 **Nuke** facilitates users by automatically sorting user-added _tasks_ and displaying the most important and urgent ones to the users. In the long term, it strives to enhance the quality of NUS students’ lives by serving as the one-stop platform for efficient management of module tasks.<br>  
 If you are an **NUS student** and have not tried out **Nuke** yet...  
-What are you waiting for? Give **Nuke** a shot, and you will see how amazing it is!  
+What are you waiting for? Give **Nuke** a shot, and you will see how amazing it is!   
+</span>
     
 <br>
 
-# General Usage  
+## General Usage  
 This section will explain the fundamental structure of the **Nuke** application, and important guidelines to follow to ensure smooth usage of the application.  
 
-## Nuke Structure
+### Nuke Structure
 **Nuke** follows the structure of a **Directory Tree** _(i.e. folder sub-folder structure)_. This Directory Tree comprises various levels:
 
-#### <u>Directory Levels Table</u>  
+##### <u>Directory Levels Table</u>  
 
 | Directory Level | Description                                                                      |
 |:---------------:|----------------------------------------------------------------------------------|
@@ -80,23 +77,25 @@ This section will explain the fundamental structure of the **Nuke** application,
 	// Todo add a sample Directory Tree diagram here
 ```
 
-### Root   
+#### Root   
 The **Root** Directory is the **base** of the entire Directory Tree. Only **one** root exists in the entire Tree. _Modules_ are added into this level into a **Module List**. A _module_ consists of both a *module code* and a _module title_. 
 > **Note**: Only **NUS modules** are allowed to be added in **Nuke**.  
 
-### Module
+#### Module
 The **Module** Directory is the **second** level of the Directory Tree.  Each _module_ has a **Category List** that has several _categories_ to categorise your _tasks_, such as Lecture, Tutorial and Assignment, so that you can further organise your _tasks_. A _category_ consists of a _name_ and a _priority_ to indicate the importance of the _tasks_ in that _category_.
 
-### Category
+#### Category
 The **Category** Directory is the **third** level of the Directory Tree. Each _category_ has a **Task List** that can contain any number of _tasks_, which are ideally related to the _category_. A _task_ has several attributes, namely the _description_, _deadline_ of the _task_ if any, _priority_ and the _done status_ of the _task_.
 
 ### Task
 The **Task** Directory is the **last** level of the Directory Tree. Each _task_ can have _files_ attached to the it. _Files_ are stored in the **File List**. The _file_ must have a _file name_ and the _path_ to the _file_.
 
-#### <u>Other Notes</u>
+##### <u>Other Notes</u>
 The **Nuke** application adheres to this Directory Tree structure strictly. It is important to note that you can only add a directory into a directory which is **_exactly_ one level lower**. For example, you can only add a _task_ into the **Category** directory, and not directly into the **Module** directory.<br>
 Normally, you would need to enter the full _directory path_ in order to add and delete _modules_, _categories_, _tasks_ and _files_. To make the process more efficient, **Nuke** enables you to traverse about the various directories via the [Change Directory](#6-change-directory) command so that you can add and delete the corresponding items directly without having to enter the full _directory path_.
 
+
+<div class="alert alert-block alert-info"><b>Tip:</b> Use blue boxes (alert-info) for tips and notes.</div>
 <br>
 
 ## Command Format  
