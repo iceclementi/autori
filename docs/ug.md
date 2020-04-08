@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="node_modules/octicons/build/font/octicons.css"></link>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 <style type="text/css">
 div {
@@ -134,14 +134,13 @@ Normally, you would need to enter the full _directory path_ in order to add and 
 
 
 <div class="alert alert-warning">
-<i class="octicon octicon-alert"></i>
-<b><big>Note</big></b> <br> 
+<i class="fa fa-exclamation"></i> <b><big>Note</big></b> <br> 
 The <b>Nuke</b> application adheres to this Directory Tree structure strictly. It is important to note that you can only add a directory into a directory which is <b><i>exactly</i> one level lower</b>. <br>
 For example, you can only add a <i>task</i> into the <b>Category</b> directory, and not directly into the <b>Module</b> directory.
 </div>
 
 <div class="alert alert-info">
-<i class="octicon octicon-info"></i><b><big>Tip</big></b> <br> 
+<i class="fa fa-info"></i> <b><big>Tip</big></b> <br> 
 You can shorten the commands you enter by first entering into a directory. Then you do <b>not</b> need to enter the full <i>directory path</i> in your command! <br>
 To learn how to traverse the various directories, see the <a href="#6-change-directory">Change Directory</a> command.
 </div>
