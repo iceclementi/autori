@@ -829,8 +829,8 @@ Marks a task as *done*.
 
 <div class="alert alert-warning">
 <i class="fa fa-exclamation"></i> <b>Note</b> <br> 
-There will <b>not</b> be any message shown for successful traversal &#128528. Instead, you will be able to see a change in the current directory path as shown in the positive traversing example below. <br>
-However, attempting to traverse ahead of the <b>Root</b> Directory (first directory) <i>or</i> beyond the <b>File</b> Directory <i>(last directory)</i> will result in an error message being shown &#128552.
+There will <b>not</b> be any message shown for successful traversal &#128528;. Instead, you will be able to see a change in the current directory path as shown in the positive traversing example below. <br>
+However, attempting to traverse ahead of the <b>Root</b> Directory (first directory) <i>or</i> beyond the <b>File</b> Directory <i>(last directory)</i> will result in an error message being shown &#128552;.
 </div>
 
 ##### Example Usage and Expected Outcome    
@@ -897,8 +897,8 @@ For example, on the <b>Module</b> directory, the <b>Info</b> command will displa
 
 <div class="alert alert-warning">
 <i class="fa fa-exclamation"></i> <b>Note</b> <br> 
-On successful undo, you will be moved back to the <b>Root</b> Directory &#128550. This is to allow the application to correctly reload the correct state.<br>
-Also, do note that attempting to undo when no changes were made will result in an error message being shown &#128552.
+On successful undo, you will be moved back to the <b>Root</b> Directory &#128550;. This is to allow the application to correctly reload the correct state.<br>
+Also, do note that attempting to undo when no changes were made will result in an error message being shown &#128552;.
 </div>
 
 ##### Example Usage and Expected Outcome    
@@ -919,8 +919,8 @@ Also, do note that attempting to undo when no changes were made will result in a
 
 <div class="alert alert-warning">
 <i class="fa fa-exclamation"></i> <b>Note</b> <br> 
-On successful redo, you will be moved back to the <b>Root</b> Directory &#128550. This is to allow the application to correctly reload the correct state.<br>
-Also, do note that attempting to redo when you are at the newest state <i>(i.e. the most recent change was not due to an <a href="#8-undo"><b>Undo</b></a> command)</i> will result in an error message being shown &#128552.
+On successful redo, you will be moved back to the <b>Root</b> Directory &#128550;. This is to allow the application to correctly reload the correct state.<br>
+Also, do note that attempting to redo when you are at the newest state <i>(i.e. the most recent change was not due to an <a href="#8-undo"><b>Undo</b></a> command)</i> will result in an error message being shown &#128552;.
 </div>
 
 ##### Example Usage and Expected Outcome    
