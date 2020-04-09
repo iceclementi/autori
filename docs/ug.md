@@ -762,7 +762,7 @@ Please do <b>not</b> delete the <i>directory</i> you are in, <i>or</i> any of yo
 `delm` deletes <i>module(s)</i> from your <b>Module Lists</b>. The <b>Module List</b> contains all your added <i>modules</i> and can be viewed via the [<b>List Module</b>](#a-list-your-modules) command.
 
 ##### **Format**
-`delm <module keyword> [ -e -a ]`  
+`delm [ <module keyword> -e -a ]`  
 
 - `module keyword` -- The <i>keyword</i> to filter the <i>modules'</i> <i>code</i> by    
 
@@ -797,7 +797,7 @@ delm cs
 `delc` deletes <i>category(s)</i> from your <b>Category Lists</b>. The <b>Category List</b> contains all your added <i>categories</i> of a <i>module</i> and can be viewed via the [<b>List Category</b>](#b-list-your-categories) command.   
 
 ##### **Format**  
-`delc <category name> -m <module code> [ -e -a ]`  
+`delc [ <category name> -m <module code> -e -a ]`  
 
 - `category keyword` -- The <i>keyword</i> to filter the <i>categories'</i> <i>name</i> by   
 - `module keyword` -- The <i>keyword</i> to filter the <i>modules'</i> <i>code</i> by 
@@ -830,7 +830,7 @@ delc lec -a
 `delt` deletes <i>task(s)</i> from your <b>Task Lists</b>. The <b>Task List</b> contains all your added <i>tasks</i> of a <i>category</i> and can be viewed via the [<b>List Task</b>](#c-list-your-tasks) command.   
 
 ##### **Format**  
-`delt <task keyword> -m <module keyword> -c <category keyword> [ -e -a ]`  
+`delt [ <task keyword> -m <module keyword> -c <category keyword> -e -a ]`  
 
 - `task keyword` -- The <i>keyword</i> to filter the <i>tasks'</i> <i>description</i> by      
 - `module keyword` -- The <i>keyword</i> to filter the <i>modules'</i> <i>code</i> by     
@@ -865,7 +865,7 @@ delt urgent assignment
 `delf` deletes a _file_ from your _task_'s **File List**. The **File List** contains all your added _files_ and can be viewed via the [List File](#d-list-your-files) command.
 
 ##### **Format**  
-`delf <file keyword> -m <module keyword> -c <category keyword> -t <task keyword> [ -e -a ]`  
+`delf [ <file keyword> -m <module keyword> -c <category keyword> -t <task keyword> -e -a ]`  
 
 - `file keyword` -- The <i>keyword</i> to filter the <i>files'</i> <i>name</i> by       
 - `module keyword` -- The <i>keyword</i> to filter the <i>modules'</i> <i>code</i> by     
@@ -1087,7 +1087,12 @@ If the <i>task</i> was <b>already done</b>, and you execute the command, you wil
 - `module code` -- The <i>module code</i> of the <i>module</i> containing the <i>task</i>   
 - `category name` -- The <i>name</i> of the   <i>category</i> containing the <i>task</i>   
   
-##### **Example Usage and Expected Outcome**   
+##### **Example Usage**  
+```
+done do lab 4 -m cs2106 -c Lab
+```
+
+##### **Expected Outcome**   
 <small><u><b>Done at Root Level</b></u></small>  
 ![done command root level](images/done_root_level.png)   
 <br>     
@@ -1309,11 +1314,11 @@ You may enter **only** the following *date* words.
 - `saturday` or `sat` -- represents the next <b>Saturday</b> from the current date  
 - `sunday` or `sun` -- represents the next <b>Sunday</b> from the current date  
   
-<div class="alert alert-info">
-<i class="fa fa-info"></i> <b>Info</b> <br> 
+ <div class="alert alert-info">
+ <i class="fa fa-info"></i> <b>Info</b> <br> 
 All dates are taken with reference to the current date on your device.  <br>  
   
-If you specify the <i>date</i> using the day of the week <i>(i.e. <code>monday</code> ... <code>sunday</code>)</i>, and the current day is the day itself, the <i>date</i> will be referred to the current date. For example, if you enter <code>wednesday</code> and it is <b>Wednesday</b> today, the <i>date</i> will be the current date.
+If you specify the <i>date</i> using the day of the week <i>(i.e. <code>monday</code> ... <code>sunday</code>, and the current day is the day itself, the <i>date</i> will be referred to the current date. For example, if you enter <code>wednesday</code> and it is <b>Wednesday</b> today, the <i>date</i> will be the current date.
 </div>
 
 ##### **2. Standard Date Format**  
@@ -1382,8 +1387,25 @@ A simple summary of the various commands are shown below:
 | [`addt`](#a-add-a-module-into-your-module-list)     | Adds a new <i>task</i><br><b>Format</b>: `addt <task description> -m <module code> -c <category name> [ -d <deadline> -p <priority> ]`<br><b>Example</b>: `addt urgent assignment -m cs2113t -c Assignment -d tmr 2359 -p 15` |   
 | [`addf`](#a-add-a-module-into-your-module-list)     | Adds a new <i>file</i><br><b>Format</b>: `addf <file name> -m <module code> -c <category name> -t <task description> -f <file path>`<br><b>Example</b>: `addm cs2113t` |  
 | [`addg`](#a-add-a-module-into-your-module-list)     | Adds a new <i>tag</i><br><b>Format</b>: `addg <tag name> -m <module code> -c <category name> -t <task description>` <br><b>Example</b>: `addg urgent -m CS2113t -c Lab -t tp` |  
-| [`mkdir`](#1-add)| Adds a <i>child directory</i><br><b>Format</b>: `mkdir <directory name>`<br><b>Example</b>: `addm cs2113t` |  
-
+| [`ls`](#2-list)| Shows the <i>child directories</i>; include <i>child directory name</i> to show it <i>child directories</i> instead<br><b>Format</b>: `ls [ <child directory name> ]`<br><b>Example</b>: `ls` &nbsp; &nbsp; `ls cs2113t` |  
+| [`lsm`](#a-add-a-module-into-your-module-list)     | Shows filtered <i>modules</i><br><b>Format</b>: `lsm [ <module keyword> -e -a ]`<br><b>Example</b>: `lsm cs` |  
+| [`lsc`](#a-add-a-module-into-your-module-list)     | Shows filtered <i>categories</i><br><b>Format</b>: `lsc [ <category keyword> -m <module code> -e -a ]`<br><b>Example</b>: `lsc tutorial -m cs2113 -e` |  
+| [`lst`](#a-add-a-module-into-your-module-list)     | Shows filtered <i>tasks</i><br><b>Format</b>: `lst [ <task keyword> -m <module keyword> -c <category keyword> -e -a ]`<br><b>Example</b>: `lst group -m cs -c assignment` |  
+| [`lsts`](#a-add-a-module-into-your-module-list)| Shows undone <i>tasks</i> sorted by <i>deadline</i> or <i>priority</i><br><b>Format</b>: `lsts [ <module code> -d -p (choose at most one; default -d) ]`<br><b>Example</b>: `lsts` &nbsp; &nbsp; `lsts cs2113t -p` |  
+| [`due`](#a-add-a-module-into-your-module-list) | Shows <i>tasks</i> at a specified <i>time period</i><br><b>Format</b>: `due <time specifier> <date> [ -a ]` <br><b>Example</b>: `due after sun -a`  &nbsp; &nbsp; `due over` |  
+| [`lsf`](#a-add-a-module-into-your-module-list)     | Shows filtered <i>files</i><br><b>Format</b>: `lsf [ <file keyword> -m <module keyword> -c <category keyword> -t <task keyword> -e -a ]` <br><b>Example</b>: `lsf -m cs -t tp -a` |  
+| [`lsg`](#a-add-a-module-into-your-module-list)     | Shows filtered <i>tags</i><br><b style="color: red">Still under implementation &#128528; Available in v3.0</b>  |  
+| [`rm`](#3-delete)| Deletes a <i>child directory</i><br><b>Format</b>: `rm <child directory name>`<br><b>Example</b>: `rm cs2102` |  
+| [`delm`](#a-add-a-module-into-your-module-list) | Deletes filtered <i>modules</i><br><b>Format</b>: `delm [ <module keyword> -e -a ]`<br><b>Example</b>: `lsm cs` |  
+| [`delc`](#a-add-a-module-into-your-module-list) | Deletes filtered <i>categories</i><br><b>Format</b>: `delc [ <category keyword> -m <module code> -e -a ]`<br><b>Example</b>: `delc lec -a` |  
+| [`delt`](#a-add-a-module-into-your-module-list) | Deletes filtered <i>tasks</i><br><b>Format</b>: `delt [ <task keyword> -m <module keyword> -c <category keyword> -e -a ]`<br><b>Example</b>: `delt assignment -c Assign` |  
+| [`delf`](#a-add-a-module-into-your-module-list) | Deletes filtered <i>files</i><br><b>Format</b>: `delf [ <file keyword> -m <module keyword> -c <category keyword> -t <task keyword> -e -a ]` <br><b>Example</b>: `delf -m cs2113 -t tp` | 
+| [`delg`](#a-add-a-module-into-your-module-list) | Deletes filtered <i>tags</i><br><b style="color: red">Still under implementation &#128528; Available in v3.0</b>  |  
+| [`edm`](#a-add-a-module-into-your-module-list)  | Edits a <i>module</i><br><b>Format</b>: `edm <module code> -m <new module code>`<br><b>Example</b>: `edm cs2102 -m cs2101` |  
+| [`edc`](#b-add-a--into-your-module-list)  | Edits a <i>category</i><br><b>Format</b>: `edc <category name> -m <module code> { -c <new category name> -p <new priority> }`<br><b>Example</b>: `edc Lab -m cs2113t -c Project -p 8` |  
+| [`edt`](#a-add-a-module-into-your-module-list)  | Edits a <i>task</i><br><b>Format</b>: `edt <task description> -m <module code> -c <category name>`<br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; `{ -t <new task description> -d <new deadline> -p <new priority> }`<br><b>Example</b>: `edt tp -d sat 2359 -p 20` |   
+| [`edf`](#a-add-a-module-into-your-module-list)  | Edits a <i>file</i><br><b>Format</b>: `edt <file name> -m <module code> -c <category name> -t <task description> -f <new file name>`<br><b>Example</b>: `edf math report -f math report draft` |  
+| [`done`](#a-add-a-module-into-your-module-list)  | Marks a <i>task</i> as done<br><b>Format</b>: `done <task description> -m <module code> -c <category name>`<br><b>Example</b>: `done do lab 4 -m cs2106 -c Lab` |  
 
 <br>
 <hr>
