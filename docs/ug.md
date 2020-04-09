@@ -1411,24 +1411,24 @@ A simple summary of the various commands are shown below:
 
 ## **FAQ**
 
-### Can I not enter the Full Path?  
+### **Can I not enter the Full Path?**  
 <div>
 Yes, you <b>can</b>! &#128521; <br> 
-You do <b>not</b> have to keep entering the <i>path</i> to the <i>directory</i> at the start of most of the commands in <b>Nuke</b>, in particular the <b><a href="#1-add">Add</a></b> and  <b><a href="#4-edit">Edit</a></b> commands. In other words, you do <b>not</b> have to include the <code>-m  &lt;module code&gt;</code>,  <code>-c  &lt;category name&gt;</code>,  <code>-t  &lt;task description&gt;</code> and  <code>-f  &lt;file name&gt;</code>. <br><br>
+You do <b>not</b> have to keep entering the <i>path</i> to the <i>directory</i> at the start of most of the commands in <b>Nuke</b>, in particular the <b><a href="#1-add">Add</a></b> and  <b><a href="#4-edit">Edit</a></b> commands.<br> In other words, you do <b>not</b> have to include the <code>-m  &lt;module code&gt;</code>,  <code>-c  &lt;category name&gt;</code>,  <code>-t  &lt;task description&gt;</code> and  <code>-f  &lt;file name&gt;</code>. <br><br>
 <b>Nuke</b> is able to intelligently fill in the missing components in the <i>path</i> for you. Here are various examples on how you can utilise this feature of <b>Nuke</b> to your advantage: <br><br>
 
-<b>In each of the examples below, we set the context to be at the Category level, and the <i>current path</i> to be <code>root / CS2113T / Project</code></b> <br>
+<b>In each of the examples below, we set the context to be at the Category level, and the <i>current path</i> to be <code>root / CS2113T / Project</code></b> <br><br>
 
-<b><u>Commands targeting Current Directory</u></b>
-If you want to add a <i>task</i> into the current <i>category</i> that you are in, that is into the <code>Project</code> <i>category</i>, instead of entering <code>addt new task -m cs2113t -c Project -p 4</code>, you can simply enter <code>addt new task -p 4</code>. &#128522; <br>
+<b><u>Commands targeting Current Directory</u></b><br>
+If you want to add a <i>task</i> into the current <i>category</i> that you are in, that is into the <code>Project</code> <i>category</i>, instead of entering <code>addt new task -m cs2113t -c Project -p 4</code>, you can simply enter <code>addt new task -p 4</code>. &#128522; <br><br>
 
-<b><u>Commands targeting Parent Directory</u></b>
-If you want to edit a <i>file</i> that has the path <code>root / CS2113T / Project / tp / image_1</code>, instead of entering <code>edf image_1 -m cs2113t -c Project -t tp -f new file name</code> you can just enter <code>edf image_1 -t tp -f new file name</code>. &#128522; <br>
+<b><u>Commands targeting Parent Directory</u></b><br>
+If you want to edit a <i>file</i> that has the path <code>root / CS2113T / Project / tp / image_1</code>, instead of entering <code>edf image_1 -m cs2113t -c Project -t tp -f new file name</code> you can just enter <code>edf image_1 -t tp -f new file name</code>. &#128522; <br><br>
 
-<b><u>Commands targeting Child Directory</u></b>
-If you want to add a <i>category</i> to the <code>CS2113T</code> <i>module</i>, instead of entering <code>addc new category -m cs2113t -p 3</code>, you can enter <code>addc new category -p 3</code>.  &#128522; <br>
+<b><u>Commands targeting Child Directory</u></b><br>
+If you want to add a <i>category</i> to the <code>CS2113T</code> <i>module</i>, instead of entering <code>addc new category -m cs2113t -p 3</code>, you can enter <code>addc new category -p 3</code>.  &#128522; <br><br>
 
-<b><u>Commands targeting Nearby Directory</u></b>
+<b><u>Commands targeting Nearby Directory</u></b><br>
 If you want to edit a <i>task</i>  that has the path <code>root / CS2113T / Lecture / read lecture notes</code>, instead of entering <code>edt read lecture notes -m cs2113t -c Lecture -p 3 -d sun 3pm</code> you can just enter <code>edt read lecture notes -c Lecture -p 3 -d sun 3pm</code>. &#128522; <br>
 <br>
 
@@ -1437,7 +1437,7 @@ Essentially, <b>Nuke</b> will fill the missing components in the <i>path</i> bas
 
 <br>
 
-### How does the Filtering Process works?  
+### **How does the Filtering Process works?**
 <div>
 <b>Nuke</b> does filtering for <b><a href="#2-list">List</a></b> and  <b><a href="#3-delete">Delete</a></b> commands. <b>Nuke</b> filters for the set of items that contains the <i>keywords</i> that you provide in the command. Filtering is always done in a case-<b>insensitive</b> manner. All <b>matched</b> items will be shown as a list. <br><br>
 
@@ -1449,13 +1449,13 @@ Let's assume you have three <i>tasks</i> with <i>directory paths</i><br>
 
 Now, entering the command <code>lst -m cs -c project -t ug</code> should fetch only the first and third <i>tasks</i>.<br><br>
 
-In addition, if an attribute is left <b>empty</b>, such as <code>lst -m cs -t ug</code>, where the <code>-c <category keyword></code> attribute is missing, <b>Nuke</b> will simply ignore filtering for <b>all</b> of the <i>categories</i>. In this case, <b>Nuke</b> will select all <i>tasks</i> with <i>module</i> containing <code>cs</code> in their <i>module code</i> and <i>tasks</i> containing <code>ug</code> in their <i>task description</i>. <br><br>
+In addition, if an attribute is left <b>empty</b>, such as <code>lst -m cs -t ug</code>, where the <code>-c &lt;category keyword&gt;</code> attribute is missing, <b>Nuke</b> will simply ignore filtering for <b>all</b> of the <i>categories</i>. In this case, <b>Nuke</b> will select all <i>tasks</i> with <i>module</i> containing <code>cs</code> in their <i>module code</i> and <i>tasks</i> containing <code>ug</code> in their <i>task description</i>. <br><br>
 
 Another feature of the filtering is that it tries to filter from the current <i>directory</i>. For example, if you are in the <i>path</i>  <code>root / CS2113T</code>, then entering <code>lsc</code> will fetch all of the <i>module</i> <code>CS2113T</code> 's <i>categories</i> only, instead of fetching all your <i>categories</i>. Unless you specify the corresponding <i>keyword</i>, or choose to filter <b>all</b> as explained later, <b>Nuke</b> will always behave in such a manner when filtering. <br> <br>
 
 In addition, there are <b>two</b> extra conditions you can include to the filtering process. They are: <br><br>
 
-<b><u>Filter Exactly</u></b>
+<b><u>Filter Exactly</u></b><br>
 This can be activated by including a <code>-e</code> at the back of your command. This filters for items that <b>matches exactly</b> the <i>keyword</i>, instead of just containing the <i>keyword</i>. <br>
 For example, for <i>modules</i> with <i>paths</i>:<br>
 <code>root / CS2113</code> and <br>
@@ -1463,7 +1463,7 @@ For example, for <i>modules</i> with <i>paths</i>:<br>
 when the command <code>delm cs2113 -e</code> is entered, only the first <i>module</i> is shown. <br>
 The  case-<b>insensitive</b> filtering and <b>empty</b> <i>keyword</i> property still holds even when filtering <b>exactly</b>. <br> <br>
 
-<b><u>Filter All</u></b>
+<b><u>Filter All</u></b><br>
 Similarly, this can be activated by including a <code>-a</code> at the back of your command. This filters for items in your entire <b>Directory List</b>, and not just limited to the current <i>directory</i>, which is the default setting. <br> <br>
 
 You can mix both <code>-e</code> and <code>-a</code> to filter exactly the way you want. &#128521;
