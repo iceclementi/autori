@@ -1,4 +1,43 @@
-<style type="text/css">
+
+<head>  
+    <meta charset="UTF-8">  
+    <title>Nuke User Guide v2.1</title>  
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> </head>  
+  
+<style type="text/css">  
+div {  
+   text-align: justify;  
+}  
+.alert {  
+  padding: 15px;  
+  margin-bottom: 20px;  
+  border: 1px solid transparent;  
+  border-radius: 4px;  
+}  
+.alert-success {  
+  background-color: #dff0d8;  
+  border-color: #d6e9c6;  
+  color: #3c763d;  
+}  
+  
+.alert-info {  
+  background-color: #d9edf7;  
+  border-color: #bce8f1;  
+  color: #31708f;  
+}  
+  
+.alert-warning {  
+  background-color: #fcf8e3;  
+  border-color: #faebcc;  
+  color: #8a6d3b;  
+}  
+  
+.alert-error {  
+  background-color: #f2dede;  
+  border-color: #ebccd1;  
+  color: #a94442;  
+}  
+
 .image-right {
   display: block;
   margin-left: 10px;
@@ -20,7 +59,7 @@
 </style>
 
 
-# **Nuke Developer Guide** <small>v1.5</small>  
+# **Nuke Developer Guide** <small>v2.1</small>  
 
 By: `CS2113T-T13-2`      Since: `Feb 2020`    
 <small>[Go to Webpage](https://ay1920s2-cs2113t-t13-2.github.io/tp/DeveloperGuide.html)</small>
@@ -32,19 +71,36 @@ By: `CS2113T-T13-2`      Since: `Feb 2020`
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; Purpose [&#10149;](#purpose)   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; Scope [&#10149;](#scope)   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; Design Goals [&#10149;](#design-goals)   
-&nbsp; &nbsp; &nbsp; &nbsp; &#8226; Definitions [&#10149;](#definitions)   
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; Definitions [&#10149;](#definitions)    
+<br>   
 <big style="color: green"> **Setting Up** [&#10149;](#setting-up)  </big>  
-<big style="color: green">  **Design** [&#10149;](#design)  </big>  
-<big style="color: green"> **Implementation** [&#10149;](#implementation)  </big>  
-&nbsp; &nbsp; &nbsp; &nbsp; 1. Add Feature [&#10149;](#1-add-feature)   
-&nbsp; &nbsp; &nbsp; &nbsp; 2. Delete Feature [&#10149;](#2-delete-feature)   
+<br>  
+<big style="color: green">  **Architecture** [&#10149;](#architecture)  </big>  
+<br>    
+<big style="color: green">  **Structure Implementation** [&#10149;](#structure-implementation)  </big>   
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; Directory [&#10149;](#1-directory)    
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; Directory Manager [&#10149;](#2-directory-manager)    
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; Directory Traversal [&#10149;](#3-directory-traversal)    
+<br>   
+<big style="color: green"> **Command Implementation** [&#10149;](#command-implementation)  </big>  
+&nbsp; &nbsp; &nbsp; &nbsp; 1. Add Command [&#10149;](#1-add-command)    
+&nbsp; &nbsp; &nbsp; &nbsp; 2. List Command [&#10149;](#2-list-command)     
+&nbsp; &nbsp; &nbsp; &nbsp; 3. Delete Command [&#10149;](#3-delete-command)     
+&nbsp; &nbsp; &nbsp; &nbsp; 4. Edit Command [&#10149;](#4-edit-command)    
+&nbsp; &nbsp; &nbsp; &nbsp; 5. Change Directory Command [&#10149;](#5-change-directory-command)    
+&nbsp; &nbsp; &nbsp; &nbsp; 6. Open File Command [&#10149;](#6-open-file-command)    
+&nbsp; &nbsp; &nbsp; &nbsp; 7. Info Command [&#10149;](#-info-command)    
+&nbsp; &nbsp; &nbsp; &nbsp; 8. Undo and Redo Commands [&#10149;](#8-undo-and-redo-commands)    
+<br>   
+<big style="color: green"> **Storage Implementation** [&#10149;](#storage-implementation)</big>     
+<br>   
 <big style="color: green"> **Appendix** [&#10149;](#appendix)  </big>  
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; User Stories [&#10149;](#user-stories)   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; Non-Functional Requirements [&#10149;](#non-functional-requirements)   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; Glossary [&#10149;](#glossary)   
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; Manual Testing [&#10149;](#manual-testing)    
 
-<br>  
+<br>   
 
 ## **Introduction**  
 
@@ -81,10 +137,10 @@ Refer to the guide [here](#) to set up.
 
 <br>
 
-## **Implementation**  
-This section will describe the significant details of how certain features in <b>Nuke</b> are being implemented.  
+## **Command Implementation**  
+This section will describe the significant details of how the commands in <b>Nuke</b> are being implemented.  
 
-### 1. Add Feature
+### 1. Add Command
 #### Overview
 The **add** feature adds modules, categories, tasks and tags into the Module, Category and Task List respectively.
 
@@ -136,8 +192,7 @@ Total modules: 3
    After the input is parsed as an **add module task** and executed, the `AddModuleCommand#execute()` will call `ModuleManager#add()` to add the module cs3235. In the `ModuleManager#add()` method, it will call `ModuleManager#contains()` to check if the module cs3235 exists in the `ArrayList` named `moduleList` , then it will check if the module code "cs3235" is a key in the `HashMap` named `modulesMap`, after all, it will instantiate an `Module` object with the module code "CS3235" and respective title "Computer Security", then add the object into the `moduleList`.
 
 2. James receive the following feedback:
-
-   ```
+```
    root :
    addm cs3235
    SUCCESS!! Module CS3235 Computer Security has been added.
@@ -156,7 +211,7 @@ Total modules: 3
    +--------------------------------------------------------------------------------------------------+
    Total modules: 4
    +--------------------------------------------------------------------------------------------------+
-   ```
+```
 
 
 
@@ -242,7 +297,7 @@ Total categories: 5
    1. enter `cd cs3235` to enter the module directory then enter `addc misc` to add the category.
    2. enter `addc misc -m cs3235` to add the category at the root directory.
 
-   Suppose James use the first method, after the second input, the input is parsed as an **add task** command and executed, the `AddCategoryCommand#execute()` will call ``AddCategoryCommand#getParentDirectory()` to get the current parent directory, then it will instantiate an `Category` object with the name "misc". After which `CategoryManager#add()` will be called to add the new object. In the `CategoryManager#add()` method, it will call `CategoryManager#contains()` method to check if the current parent directory contains the category with name "misc", finally add the object into the `ArrayList` of `categoryList`.
+   Suppose James use the first method, after the second input, the input is parsed as an **add task** command and executed, the `AddCategoryCommand#execute()` will call `AddCategoryCommand#getParentDirectory()` to get the current parent directory, then it will instantiate an `Category` object with the name "misc". After which `CategoryManager#add()` will be called to add the new object. In the `CategoryManager#add()` method, it will call `CategoryManager#contains()` method to check if the current parent directory contains the category with name "misc", finally add the object into the `ArrayList` of `categoryList`.
 
 2. James receive the following feedback:
 
@@ -260,9 +315,14 @@ Below is a *sequence diagram* to illustrate the above example scenario.
 to-do: add the sequence diagram
 ```
 
+<br><br>
+
+### 2. List Command  
 
 
-### 2. Delete Feature  
+<br><br>
+
+### 3. Delete Command  
 #### Overview  
 The **delete** feature deletes *modules*, *categories* and *tasks* from the Module, Category and Task List respectively.   
 When the user first requests to execute the **delete** command to delete a directory by providing its name, the application will first filter for directories with matching names. From here, there are **three** possible outcomes:  
@@ -317,13 +377,13 @@ Total tasks: 5
 +--------------------------------------------------------------------------------------------------+
 ```
 
-![Step 1](images/Number_1.png){: .image-left .step } 
+![Step 1](images/Number_1.png){: .image-left .step }   
 <br>
 James will first enter the command to delete *tasks*:  
 	`delt work -a`  
 	After the input is parsed as a **delete task** command and executed, the `DeleteTaskCommand#execute()` will call `FilterCommand#createFilteredTaskList()` to create the filtered list of *tasks* containing the *description* "work". `DeleteTaskCommand#execute()` will then call its own method `DeleteTaskCommand#executeInitialDelete(filteredList)` to prepare the prompt to request James to enter the list number of the *tasks* he would like to delete.  
 
-![Step 2](images/Number_2.png){: .image-left .step } 
+![Step 2](images/Number_2.png){: .image-left .step }    
 <br>
 James receives the following prompt:
 
@@ -345,7 +405,7 @@ Enter the list number(s) of the tasks to delete.
 He proceeds to enter list numbers `2 3` as he has already completed both *tasks*.  
 After the list numbers are parsed, it will call `ListNumberPrompt#execute()`, which will prepare the prompt for the delete confirmation, and then calls `ListNumberPrompt#executePromptConfirmation()`.
 
-![Step 3](images/Number_3.png){: .image-left .step} 
+![Step 3](images/Number_3.png){: .image-left .step}   
 <br>
 James receives another prompt:  
 
@@ -358,7 +418,7 @@ Big Lab Work
 He enters `y` to confirm the deletion.
 `DeleteConfirmationPrompt#execute()` will be called, which then calls `DeleteConfirmationPrompt#executeMultipleDelete(filteredList)` to delete James' selected *tasks* from his Task List.
 
-![Step 4](images/Number_4.png){: .image-left .step}
+![Step 4](images/Number_4.png){: .image-left .step}  
 <br>
 James receives the final message:
 
@@ -371,9 +431,9 @@ Deletion process ends.
 <br>
 
 Below is a *sequence diagram* to illustrate the above example scenario.  
-```
-	// To do Sequence diagram here
-```
+
+![Delete Command Sequence Diagram](images/Delete_Command_Sequence_Diagram.png)
+<span style="color: green"><small><i>Figure <b>Delete Command Sequence Diagram</b></i></small></span>
 
 <br><br>
 
@@ -384,6 +444,86 @@ Below is a *sequence diagram* to illustrate the above example scenario.
 
 
 <br>
+
+### **5. Change Directory Command**   
+
+### **6. Open File Command**    
+
+### **7. Info Command**    
+  
+
+### **8. Undo and Redo Commands**    
+#### **Overview**     
+<div>
+The <b>undo</b> and <b>redo</b> commands work hand in hand with each other. The <b>undo</b> command undoes a <i>change</i> made to the <b>Directory List</b>. <i>Change</i> here refers to adding, deleting or editing items to the <i>list</i>. The <b>redo</b> command reverts the effect of the <b>undo</b> command.   
+</div>  
+
+<br>
+
+#### **Implementation**     
+<div>
+The state of the <i>directories</i> is being maintained by the <code>ScreenShotManager</code> class. This is done via two <b>stacks</b>, one for <b>undo</b>, and the other for <b>redo</b>.  <br><br>
+
+When the application starts, both stacks are empty. After the applications loads the saved <i>directory list file</i>, the current state of the <i>directories</i> is pushed into the <b>undo</b> stack. 
+</div>  
+<br>    
+  
+![undo command init](images/dg_undo_init.png)
+<br>   
+<div>
+When a <i>change</i> is made to the <i>list</i> from a successful add, delete or edit command, the <b>new</b> state is  pushed into the <b>undo</b> stack. The new state is also saved by the application. See <a href="#storage-implementation">here</a> to find out more about the storage implementation.
+</div>  
+<br>    
+  
+![undo command change 1](images/dg_undo_change_1.png)
+<br>   
+<div>
+If the user calls for the <b>undo</b> command, the top-most state in the <b>undo</b> stack is removed and pushed into the <b>redo</b> stack. Then, the <i>list</i> will reload to the current top-most state in the <b>undo</b> stack, which is actually the previous state.  
+</div>  
+<br>    
+  
+![undo command redo](images/dg_redo.png)
+<br>   
+<div>
+Conversely, If the user calls for the <b>redo</b> command, the top-most state in the <b>redo</b> stack is removed and pushed back into the <b>undo</b> stack. Then, the <i>list</i> will reload to the current top-most state in the <b>undo</b> stack, which is actually the state which was previously undone.  
+</div>  
+<br>    
+  
+![undo command undo](images/dg_undo.png)
+<br>   
+<div>
+If another <i>change</i> is made to the <i>list</i>, but the <b>redo</b> stack is emptied, and the new current state is added into the <b>undo</b> stack.
+</div>  
+<br>    
+  
+![undo command change 2](images/dg_undo_change_2.png)
+<br>   
+<div>
+The process continues.
+</div> 
+<br>
+<div class="alert alert-warning">  
+<i class="fa fa-exclamation"></i> <b>Note</b> <br>   
+An error message will be shown to the user when the user tries to undo when no recent change was made, such as at the start of the application, and when the user tries to redo when nothing was recently undone. 
+<br><br>
+This is done in the <code>ScreenShotManager</code> class by checking if the <b>undo</b> stack contains more than 1 element (first element is the start-up state), and if the <b>redo</b> stack is not empty respectively. If checking fails, an exception will be thrown. &#128529;
+</div>    
+
+Below is a sequence diagram of the undo command in action: <br>   
+![undo command sequence diagram](images/dg_undo_seq.png)  
+
+
+
+
+ 
+
+
+
+
+
+
+<br><br>
+
 
 ## **Appendix**  
 
