@@ -1376,11 +1376,13 @@ A simple summary of the various commands are shown below:
 
 | Command<br>Word   | What and How?                                                                    |  
 |:---------------:|---------------------------------------------------------------------------------|  
-| [`addm`](#a-add-a-module-into-your-module-list)     | Adds a module<br><b>Format</b>: `addm <module code>`<br><b>Example</b>: `addm cs2113t` |  
-| [`addc`](#b-add-a--into-your-module-list)     | Adds a category<br><b>Format</b>: `addc <category name> -m <module code> [ -p <priority> ]`<br><b>Example</b>: `addc Project -m cs2113t -p 3` |  
-| [`addt`](#a-add-a-module-into-your-module-list)     | Adds a task<br><b>Format</b>: `addt <task description> -m <module code> -c <category name> [ -d <deadline> -p <priority> ]`<br><b>Example</b>: `addt urgent assignment -m cs2113t -c Assignment -d tmr 2359 -p 15` |   
-| [`addf`](#a-add-a-module-into-your-module-list)     | Adds a file<br><b>Format</b>: `addf <file name> -m <module code> -c <category name> -t <task description> -f <file path>`<br><b>Example</b>: `addm cs2113t` |  
-| [`addg`](#a-add-a-module-into-your-module-list)     | Adds a tag<br><b>Format</b>: `addg <tag name> -m <module code> -c <category name> -t <task description>` <br><b>Example</b>: `addg urgent -m CS2113t -c Lab -t tp` |  
+| [`mkdir`](#1-add)| Adds a new <i>child directory</i><br><b>Format</b>: `mkdir <directory name>`<br><b>Example</b>: `mkdir cs2113t` |  
+| [`addm`](#a-add-a-module-into-your-module-list)     | Adds a new <i>module</i><br><b>Format</b>: `addm <module code>`<br><b>Example</b>: `addm cs2113t` |  
+| [`addc`](#b-add-a--into-your-module-list)     | Adds a new <i>category</i><br><b>Format</b>: `addc <category name> -m <module code> [ -p <priority> ]`<br><b>Example</b>: `addc Project -m cs2113t -p 3` |  
+| [`addt`](#a-add-a-module-into-your-module-list)     | Adds a new <i>task</i><br><b>Format</b>: `addt <task description> -m <module code> -c <category name> [ -d <deadline> -p <priority> ]`<br><b>Example</b>: `addt urgent assignment -m cs2113t -c Assignment -d tmr 2359 -p 15` |   
+| [`addf`](#a-add-a-module-into-your-module-list)     | Adds a new <i>file</i><br><b>Format</b>: `addf <file name> -m <module code> -c <category name> -t <task description> -f <file path>`<br><b>Example</b>: `addm cs2113t` |  
+| [`addg`](#a-add-a-module-into-your-module-list)     | Adds a new <i>tag</i><br><b>Format</b>: `addg <tag name> -m <module code> -c <category name> -t <task description>` <br><b>Example</b>: `addg urgent -m CS2113t -c Lab -t tp` |  
+| [`mkdir`](#1-add)| Adds a <i>child directory</i><br><b>Format</b>: `mkdir <directory name>`<br><b>Example</b>: `addm cs2113t` |  
 
 
 <br>
