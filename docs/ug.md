@@ -1309,11 +1309,11 @@ You may enter **only** the following *date* words.
 - `saturday` or `sat` -- represents the next <b>Saturday</b> from the current date  
 - `sunday` or `sun` -- represents the next <b>Sunday</b> from the current date  
   
- <div class="alert alert-info">
- <i class="fa fa-info"></i> <b>Info</b> <br> 
+<div class="alert alert-info">
+<i class="fa fa-info"></i> <b>Info</b> <br> 
 All dates are taken with reference to the current date on your device.  <br>  
   
-If you specify the <i>date</i> using the day of the week <i>(i.e. <code>monday</code> ... <code>sunday</code>, and the current day is the day itself, the <i>date</i> will be referred to the current date. For example, if you enter <code>wednesday</code> and it is <b>Wednesday</b> today, the <i>date</i> will be the current date.
+If you specify the <i>date</i> using the day of the week <i>(i.e. <code>monday</code> ... <code>sunday</code>)</i>, and the current day is the day itself, the <i>date</i> will be referred to the current date. For example, if you enter <code>wednesday</code> and it is <b>Wednesday</b> today, the <i>date</i> will be the current date.
 </div>
 
 ##### **2. Standard Date Format**  
