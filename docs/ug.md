@@ -99,17 +99,19 @@ By: `CS2113T-T13-2`      Since: `Feb 2020`
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -- Time Specifier Formats [&#10149;](#time-specifier-formats)    
 <br>  <big style="color: green"> **Command Summary** [&#10149;](#command-summary) </big>   
 <br>  <big style="color: green"> **FAQ** [&#10149;](#faq) </big>   
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Can I not enter the Full Path** [&#10149;](#can-i-not-enter-the-full-path)  
+&nbsp; &nbsp; &nbsp; &nbsp; &#8226; **How does the Filtering Process works?** [&#10149;](#how-does-the-filtering-process-works)  
 
 <br>  
 
 ## **Introduction**  
-<span style="text-align: justify; display: block">
-This **Nuke** application is a simple yet powerful task management system that is dedicated to providing **NUS students** a more efficient way to organise their _modules_ and _tasks_.<br>  
-You will be interacting with the application via the command line. With the **Nuke** application, you will be able to perform various operations to manage your _modules_ and _tasks_ such as adding, deleting and listing your  _modules_ and _tasks_. You may also add additional properties to your _tasks_ such as _files_, _deadlines_, and _priorities_.<br>  
-**Nuke** facilitates users by automatically sorting user-added _tasks_ and displaying the most important and urgent ones to the users. In the long term, it strives to enhance the quality of NUS students’ lives by serving as the one-stop platform for efficient management of module tasks.<br>  
-If you are an **NUS student** and have not tried out **Nuke** yet...  
-What are you waiting for? Give **Nuke** a shot, and you will see how amazing it is!   
-</span>
+<div>
+This <b>Nuke</b> application is a simple yet powerful task management system that is dedicated to providing <b>NUS students</b> a more efficient way to organise their <i>modules</i> and <i>tasks</i>.<br>  <br>
+You will be interacting with the application via the command line. With the <b>Nuke</b> application, you will be able to perform various operations to manage your <i>modules</i> and <i>tasks</i> such as adding, deleting and listing your  <i>modules</i> and <i>tasks</i>. You may also add additional properties to your <i>tasks</i> such as <i>files</i>, <i>deadlines</i>, and <i>priorities</i>.<br>  <br>
+<b>Nuke</b> facilitates users by automatically sorting user-added <i>tasks</i> and displaying the most important and urgent ones to the users. In the long term, it strives to enhance the quality of NUS students’ lives by serving as the one-stop platform for efficient management of module tasks.<br>  <br>
+If you are an <b>NUS student</b> and have not tried out <b>Nuke</b> yet... <br> 
+What are you waiting for? Give <b>Nuke</b> a shot, and you will see how amazing it is!   
+</div>
 
 [Back To Top](#table-of-contents)
 
@@ -1449,7 +1451,7 @@ Let's assume you have three <i>tasks</i> with <i>directory paths</i><br>
 
 Now, entering the command <code>lst -m cs -c project -t ug</code> should fetch only the first and third <i>tasks</i>.<br><br>
 
-In addition, if an attribute is left <b>empty</b>, such as <code>lst -m cs -t ug</code>, where the <code>-c &lt;category keyword&gt;</code> attribute is missing, <b>Nuke</b> will simply ignore filtering for <b>all</b> of the <i>categories</i>. In this case, <b>Nuke</b> will select all <i>tasks</i> with <i>module</i> containing <code>cs</code> in their <i>module code</i> and <i>tasks</i> containing <code>ug</code> in their <i>task description</i>. <br><br>
+Furthermore, if an attribute is left <b>empty</b>, such as <code>lst -m cs -t ug</code>, where the <code>-c &lt;category keyword&gt;</code> attribute is missing, <b>Nuke</b> will simply ignore filtering for <b>all</b> of the <i>categories</i>. In this case, <b>Nuke</b> will select all <i>tasks</i> with <i>module</i> containing <code>cs</code> in their <i>module code</i> and <i>tasks</i> containing <code>ug</code> in their <i>task description</i>. <br><br>
 
 Another feature of the filtering is that it tries to filter from the current <i>directory</i>. For example, if you are in the <i>path</i>  <code>root / CS2113T</code>, then entering <code>lsc</code> will fetch all of the <i>module</i> <code>CS2113T</code> 's <i>categories</i> only, instead of fetching all your <i>categories</i>. Unless you specify the corresponding <i>keyword</i>, or choose to filter <b>all</b> as explained later, <b>Nuke</b> will always behave in such a manner when filtering. <br> <br>
 
