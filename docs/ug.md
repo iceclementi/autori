@@ -1525,11 +1525,11 @@ You can mix both <code>-e</code> and <code>-a</code> to filter exactly the way y
 If you have any further inquiries, or if you realised any <b>bugs</b> <i class="fa fa-bug"></i> while running the <B>Nuke</b> application, feel free to contact us at: <br><br>
 
 <div style="text-align: center">
-<a href="https://www.facebook.com/nukeproject/"><i class="fa fa-facebook-square fa-3x"></i> <b>Facebook</b></a> 
+<i class="fa fa-facebook-square fa-2x" style="color:blue"></i> <a href="https://www.facebook.com/nukeproject/"><b>Facebook</b></a> 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-<a href="mailto:nukeproject@gmail.com"><i class="fa fa-google fa-3x"></i> <b>Gmail</b></a>
+<i class="fa fa-google fa-2x" style="color: red"></i> <a href="mailto:nukeproject@gmail.com"><b>Gmail</b></a>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-<a href="mailto:nukeproject@yahoo.com fa-3x"><i class="fa fa-yahoo"></i> <b>Yahoo! Mail</b></a> 
+<i class="fa fa-yahoo 2x" style="color: purple"></i> <a href="mailto:nukeproject@yahoo.com fa-2x"><b>Yahoo! Mail</b></a> 
 </div>
 
 <br> <br>
