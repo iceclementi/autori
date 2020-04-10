@@ -1,3 +1,4 @@
+
 <head>  
     <meta charset="UTF-8">  
     <title>Nuke User Guide v2.1</title>  
@@ -42,6 +43,10 @@ div {
 By: `CS2113T-T13-2` Since: `Feb 2020` <small>    
 [Go to Webpage](https://ay1920s2-cs2113t-t13-2.github.io/tp/UserGuide.html)</small>     
   
+<br><br>    
+  
+ 
+<hr>  
   
 ## **Table of Contents**   
 <big style="color: green">**Introduction** [&#10149;](#introduction)  </big>     
@@ -96,10 +101,15 @@ By: `CS2113T-T13-2` Since: `Feb 2020` <small>
 <br>  <big style="color: green"> **FAQ** [&#10149;](#faq) </big>     
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **Can I not enter the Full Path** [&#10149;](#can-i-not-enter-the-full-path)    
 &nbsp; &nbsp; &nbsp; &nbsp; &#8226; **How does the Filtering Process works?** [&#10149;](#how-does-the-filtering-process-works)    
+<br>  <big style="color: green"> **Contact Us** [&#10149;](#contact-us) </big>     
+    
+<br><br>    
   
-<br>    
+ 
+<hr>  
   
-## **Introduction** <div>  
+## **Introduction**   
+<div>  
 This <b>Nuke</b> application is a simple yet powerful task management system that is dedicated to providing <b>NUS students</b> a more efficient way to organise their <i>modules</i> and <i>tasks</i>.<br>  <br>  
 You will be interacting with the application via the command line. With the <b>Nuke</b> application, you will be able to perform various operations to manage your <i>modules</i> and <i>tasks</i> such as adding, deleting and listing your  <i>modules</i> and <i>tasks</i>. You may also add additional properties to your <i>tasks</i> such as <i>files</i>, <i>deadlines</i>, and <i>priorities</i>.<br>  <br>  
 <b>Nuke</b> facilitates users by automatically sorting user-added <i>tasks</i> and displaying the most important and urgent ones to the users. In the long term, it strives to enhance the quality of NUS students’ lives by serving as the one-stop platform for efficient management of module tasks.<br>  <br>  
@@ -109,13 +119,19 @@ What are you waiting for? Give <b>Nuke</b> a shot, and you will see how amazing 
   
 [Back To Top](#table-of-contents)  
   
-<br>  
+<br><br>    
+  
+ 
+<hr>  
   
 ## **Setting Up**  
   
 [Back To Top](#table-of-contents)  
   
-<br>  
+<br><br>    
+  
+ 
+<hr>  
   
 ## **General Usage**   
 This section will explain the fundamental structure of the **Nuke** application, and important guidelines to follow to ensure smooth usage of the application.    
@@ -234,6 +250,9 @@ Specifically, each word in the name of your directory has to begin with a alpha-
   
 <br><br>    
   
+ 
+<hr>  
+  
 ## **Features**  
 ### **1. Add**  
 Adds a <i>module</i>, <i>category</i>,  <i>task</i> or <i>file</i> into their respective lists.<br>   
@@ -278,7 +297,7 @@ For more information on how and if you can <b>not</b> enter  the <i>full directo
 The <i>module code</i> is case-<b>insensitive</b>. However, it must correspond to a valid <b>NUS module</b>. Only <b>NUS modules</b> can be added in this version of <b>Nuke</b>.  
 </div>  
   
-##### Example Usage   
+##### **Example Usage**   
 ```  
 addm cs2113t  
 ```  
@@ -318,7 +337,7 @@ The <code>priority</code> that you give must be a number between 0 and 20 inclus
 addc Project -m cs2113t -p 3  
 ```  
   
-##### Expected Outcome  
+##### **Expected Outcome**  
 ![addm command](images/ug_addc_outcome.png)     
   
 <small><b>Before</b></small>     
@@ -585,7 +604,7 @@ lsts -p
 lsts cs2113 -p  
 ```  
   
-##### Expected Outcome    
+##### **Expected Outcome**    
 <small><u><b>Sort by Deadline</b></u></small>    
 ![image-20200401012942212](images/ug_lsts_1.png)    
 <br>  
@@ -633,7 +652,8 @@ due tdy
 due over  
 ```  
   
-##### **Expected Outcome** <small><u><b>With Time Specifier</b></u></small>    
+##### **Expected Outcome**   
+<small><u><b>With Time Specifier</b></u></small>    
 ![due command with time specifier](images/due_timespec.png)      
 <br>    
 <small><u><b>Without Time Specifier</b></u></small>     
@@ -719,7 +739,7 @@ Please do <b>not</b> delete the <i>directory</i> you are in, <i>or</i> any of yo
 </div>     
 [Back To Top](#table-of-contents)  
   
-#### a. Delete Modules from your Module Lists   
+#### **a. Delete Modules from your Module Lists**   
   
 `delm` deletes <i>module(s)</i> from your <b>Module Lists</b>. The <b>Module List</b> contains all your added <i>modules</i> and can be viewed via the [<b>List Module</b>](#a-list-your-modules) command.   
   
@@ -770,7 +790,7 @@ delc Tutorial
 delc lec -a  
 ```  
   
-###### Expected Outcome    
+##### **Expected Outcome**    
 <small><u><b>Single Deletion</b></u></small>    
 ![delc command single delete](images/ug_delc_outcome.png)     
   
@@ -855,13 +875,14 @@ delf diag -a
   
 `delg` deletes a _tag_ from your _task_'s **Tag List**. The **Tag List** contains all your added _tags_ to the _task_. (and can be viewed via the List Tag command).   
   
-##### Format     
+##### **Format**       
 `delg <tag info> -m <module code> -c <category name> -t <task description>`   
    
 - `tag info` -- The _tag_ to be deleted  
 - `module code` -- The _module code_ of the _module_ to contain the _category_ to be added    
 - `category name` -- The _name_ of the _category_ - `task decription` -- The _description_ of the _task_   
-##### Example Usage  
+   
+##### **Example Usage**  
 ```  
 delg urgent -m CS2113t -c Lab -t tp  
 ```  
@@ -874,6 +895,7 @@ delg urgent -t tp
 ```  
 delg urgent  
 ```  
+<br>  
   
 [Back To Top](#table-of-contents)  
   
@@ -1426,12 +1448,12 @@ A simple summary of the various commands are shown below:
   
 <br><br>    
   
-  
+ 
 <hr>  
   
 ## **FAQ**  
   
-### **Can I not enter the Full Path?**   
+### **Can I not enter the Full Path?**  
 <div>  
 Yes, you <b>can</b>! &#128521; <br>   
 You do <b>not</b> have to keep entering the <i>path</i> to the <i>directory</i> at the start of most of the commands in <b>Nuke</b>, in particular the <b><a href="#1-add">Add</a></b> and  <b><a href="#4-edit">Edit</a></b> commands.<br> In other words, you do <b>not</b> have to include the <code>-m  &lt;module code&gt;</code>,  <code>-c  &lt;category name&gt;</code>,  <code>-t  &lt;task description&gt;</code> and  <code>-f  &lt;file name&gt;</code>. <br><br>  
@@ -1455,9 +1477,11 @@ If you want to edit a <i>task</i>  that has the path <code>root / CS2113T / Lect
 Essentially, <b>Nuke</b> will fill the missing components in the <i>path</i> based on your current <i>directory path</i>. Hence, it would be good to use the <b><a href="#5-change-directory">Change Directory</a></b> command to move to the corresponding <i>directory</i> first, so you do not have to enter the <i>full path</i>.  
 </div>  
   
+   
+[Back To Top](#table-of-contents)  
 <br>  
   
-### **How does the Filtering Process works?**   
+### **How does the Filtering Process works?**  
 <div>  
 <b>Nuke</b> does filtering for <b><a href="#2-list">List</a></b> and  <b><a href="#3-delete">Delete</a></b> commands. <b>Nuke</b> filters for the set of items that contains the <i>keywords</i> that you provide in the command. Filtering is always done in a case-<b>insensitive</b> manner. All <b>matched</b> items will be shown as a list. <br><br>  
   
@@ -1489,4 +1513,18 @@ Similarly, this can be activated by including a <code>-a</code> at the back of y
 You can mix both <code>-e</code> and <code>-a</code> to filter exactly the way you want. &#128521;  
 </div>  
   
+[Back To Top](#table-of-contents)
+
+
+## **Contact Us**  
+<div>
+If you have any further inquiries, or if you realised any <b>bugs</b> <i class="fas fa-bug"></i> while running the <B>Nuke</b> application, feel free to contact us at: <br><br>
+
+<i class="fab fa-facebook"></i> [https://www.facebook.com/nukeproject/](https://www.facebook.com/nukeproject/) <br>
+<i class="fab fa-google"></i> nukeproject@gmail.com <br>
+<i class="fab fa-yahoo"></i> nukeproject@yahoo.com <br><br>
+
+We are currently still at the development stage of the <b>Nuke</b> application. Any feedback you give can help us to improve <b>Nuke</b> even further! &#128516;
+</div>
+
 [Back To Top](#table-of-contents)
