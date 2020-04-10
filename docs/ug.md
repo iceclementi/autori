@@ -1515,14 +1515,20 @@ You can mix both <code>-e</code> and <code>-a</code> to filter exactly the way y
   
 [Back To Top](#table-of-contents)
 
+<br><br>    
+  
+ 
+<hr>  
 
-## **Contact Us**  
+## **Contact Us**   
 <div>
-If you have any further inquiries, or if you realised any <b>bugs</b> <i class="fas fa-bug"></i> while running the <B>Nuke</b> application, feel free to contact us at: <br><br>
+If you have any further inquiries, or if you realised any <b>bugs</b> <i class="fa fa-bug"></i> while running the <B>Nuke</b> application, feel free to contact us at: <br><br>
 
-<i class="fab fa-facebook"></i> [https://www.facebook.com/nukeproject/](https://www.facebook.com/nukeproject/) <br>
-<i class="fab fa-google"></i> nukeproject@gmail.com <br>
-<i class="fab fa-yahoo"></i> nukeproject@yahoo.com <br><br>
+<a href="https://www.facebook.com/nukeproject/"><i class="fa fa-facebook-square"></i></a> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="mailto:nukeproject@gmail.com"><i class="fa fa-google"></i></a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="mailto:nukeproject@yahoo.com"><i class="fa fa-yahoo"></i></a> <br> <br>
 
 We are currently still at the development stage of the <b>Nuke</b> application. Any feedback you give can help us to improve <b>Nuke</b> even further! &#128516;
 </div>
