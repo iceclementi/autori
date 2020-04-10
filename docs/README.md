@@ -1,4 +1,5 @@
 
+
 <head>  
     <meta charset="UTF-8">  
     <title>Nuke User Guide v2.1</title>  
@@ -319,6 +320,62 @@ to-do: add the sequence diagram
 
 ### 2. List Command  
 
+#### Overview  
+
+The **List** feature lists out *modules*, *categories* and *tasks* from the Module, Category and Task List respectively.   
+When the user first requests to execute the **list** command to list out directory by providing its name, the application will first filter for directories with matching names. From here, there are **three** possible outcomes:  
+
+1. There are **no** matches --  Nothing is listed out.
+2. There are matches -- The list of matches will be shown to the user.
+
+#### Feature Implementation  
+
+![Delete Command Class Diagram](images/List_Command_Class_Diagram.png)
+
+<span style="color: green"><small><i>Figure <b>List Command Class Diagram</b></i></small></span>
+
+The `ListModuleCommand`, `ListCategoryCommand`, `ListTaskCommand`, `ListFileCommand`, `DueCommand`, `ListModuleTaskCommand`, `ListTaskSortedCommand` classes in the application facilitates this **list** feature. They are in charge of listing out *modules*, *categories*, *tasks*, *file*s, all *task*s at the specified time period, *task*s of *module* in ascending order of deadline and all undone *task*s sorted by deadline or priority respectively. <br>  
+
+As shown in the figure above, those seven classes each extends from the abstract `ListCommand` class.  They also [override](#) the ancestor `Command` class's `execute()` method, which role is to list out desired entries to the user. <br>
+
+
+
+The `ListCommand` class in turn extends the `FilterCommand` abstract class. The `FilterCommandClass` contains the following vital methods for filtering:  
+
+- `createFilteredModuleList()` -- Creates an `ArrayList` of the filtered *modules*.  
+- `createFilteredCategoryist()` -- Creates an `ArrayList` of the filtered *categories*.  
+- `createFilteredTaskList()` -- Creates an `ArrayList`of the filtered *tasks*.  
+
+Lastly, the `FilterCommand` class extends the abstract `Command` class that contains the `execute()` method to execute the actual **list** command.  
+
+#### Example Usage  
+
+The listing process for *modules*, *categories*, *tasks*, *file*s, all *task*s at the specified time period, *task*s of *module* in ascending order of deadline and all undone *task*s sorted by deadline or priority are similar. In this example, the listing process for *modules* will be illustrated as a series of steps.  <br>
+James is a user and wants to list out all of his *modules* with *moduleCode* begin with "CS". Assume that he has the current Module List: 
+
+```
++--------------------------------------------------------------------------------------------------+
+ NO |  MODULE CODE   |                                 MODULE TITLE                                 
++--------------------------------------------------------------------------------------------------+
+ 1  |     CS2101     |             Effective Communication for Computing Professionals              
+ 2  |    CS2113T     |              Software Engineering & Object-Oriented Programming              
+ 3  |     CS3230     |                      Design and Analysis of Algorithms                       
+ 4  |     CS3235     |                              Computer Security                               
+ 5  |    GEH1036     |                           Living with Mathematics                            
+ 6  |    IFS4103     |                         Penetration Testing Practice                         
++--------------------------------------------------------------------------------------------------+
+Total modules: 6
++--------------------------------------------------------------------------------------------------+
+```
+
+<br>
+James will first enter the command to list out *modules* with *moduleCode* begin with "CS":  
+	`lsm CS`  
+After the input is parsed as a **list module** command and executed, the `ListModuleCommand#execute()` will call `FilterCommand#createFilteredModuleList()` to create the filtered list of *modules* containing the *Modules* with *moduleCode* begin with "CS". `ListModuleCommand#execute()` will then call its parent class's method `FilterCommand#sortModuleList(filteredModuleList)` to sort the *modules* by their respective moduleCode. And finally the sorted Arraylist of *Module*s is used to instantiate a CommandResult object and returned, and `ui#showResult(commandResult)` will be called to show the result to the user. And Listing process ends.
+
+Below is a *sequence diagram* to illustrate the above example scenario.  
+
+![Delete Command Sequence Diagram](images/List_Module_Command_Sequence_Diagram.png)
 
 <br><br>
 
@@ -438,12 +495,60 @@ Below is a *sequence diagram* to illustrate the above example scenario.
 <br><br>
 
 ### 4. Edit Command
-```
-	// To do implementaitons for other features
-```
-
-
+<div>   
+The <b>edit</b> command edits the attributes of a <i>directory</i>. For example, user can edit a <i>category</i>'s <i>name</i> and <i>priority</i>. For <i>tasks</i>, the user is also able to mark them as done.   
+</div>    
+  
+#### **Implementation**     
 <br>
+
+![edit commands class diagram](images/dg_edit_class.png)   
+ <span style="color: green"><small><i>Figure <b>Edit Commands Class Diagram</b></i></small></span>   
+ <br>  
+<div>   
+The <b>edit</b> commands all work in a similar manner. As seen in the <i>class diagram</i> above, each of the <b>commands</b> extends from the <i>abstract</i> <code>EditCommand</code> class. The <code>EditCommand</code> class has an <i>abstract</i> method, <code>toEdit(Directory)</code>, which is to be implemented by each of the <b>edit</b> commands. 
+<br><br>
+The <b>edit</b> command will first checks if the attribute String exceeds a fixed length by its own  <code>isExceedLengthLimit()</code> method <i>(See <a href="design-considerations-1">here</a> for the considerations of the length limit)</i>. It then calls <code>DirectoryTraverser</code> class to get the appropriate <code>Directory</code> to edit.    
+<br><br>   
+<div class="alert alert-info">  
+<i class="fa fa-info"></i> <b>Info</b> <br>   
+If the attribute String <b>exceeds</b> the length limit, an <b>exception</b> will be thrown &#128528; and the user will be shown an error message.  
+</div>   
+<br><br>   
+In addition, for <code>EditCategoryCommand</code> and <code>EditTaskCommand</code>, it will fill in any missing attributes not specified by the user in their input. This is done through the command's <code>fillAttributes()</code> method.  
+<br><br>
+Finally, the <b>edit</b> command will perform the <code>edit()</code> method to edit the <code>Directory</code>. 
+</div>    
+<br>    
+<div class="alert alert-info">  
+<i class="fa fa-info"></i> <b>Info</b> <br>   
+The <code>Parser</code> class also helps to check if the user's input contains attributes of the <i>directory</i> to edit. For example, if a user executes the <b>edit module</b> command, but does not enter a <i>new module code</i> to be edited, the application will prompt the user to enter a <i>new module code</i>.  
+</div>   
+<br>    
+   
+An example <i>sequence diagram</i> is shown below when a user requests to edit a <i>category</i>:<br>
+![edit command sequence diagram](images/dg_edit_seq.png)    
+ <span style="color: green"><small><i>Figure <b>Edit Command Sequence Diagram</b></i></small></span>   
+<br>   
+  
+#### **Design Considerations**     
+<b>Editing Task</b>  
+- <b>Alternative 1</b>: Merge <code>EditTaskCommand</code> class with <code>MarkAsDoneCommand</code> class     
+	- <b>Pros</b>: There is one less class to implement. Also, the user does not need to remember another <i>command word</i>.  
+	- <b>Cons</b>: While there may be one less <i>command word</i>, there may be one more <i>prefix</i> for the user to remember as well. Also, marking a <i>task</i> as done seems to be more specific compared to changing the attributes of the <i>task</i> such as its <i>description</i> and <i>deadline</i>.   
+- <b>Alternative 2</b>: Have separate <code>EditTaskCommand</code> and <code>MarkAsDoneCommand</code> classes <b>(current implementation)</b>        
+	- <b>Pros</b>: Have a more specialised class just to mark user's <i>tasks</i> as done. Easier to implement and differentiates from the standard <code>EditTaskCommand</code>.      
+	- <b>Cons</b>: There is one more <i>command word</i> for the user to remember.          
+  
+<b>Edit Multiple Attributes</b>  
+- <b>Alternative 1</b>: User can only edit one attribute of a <i>directory</i> at a time       
+	- <b>Pros</b>: May be easier to implement. Checking that the user has provided an attribute to edit is also simple <i>(just check if the attribute is empty)</i>.  
+	- <b>Cons</b>: The user may want to edit more than one attributes at the same time. For example, the user may want to change both the <i>name</i> and <i>priority</i> of a <i>category</i>. This means that the user will have to execute the <b>edit category</b> command twice, which is not efficient.
+- <b>Alternative 2</b>: User can edit any number for attributes of a <i>directory</i> at a time <b>(current implementation)</b>        
+	- <b>Pros</b>: The user does not need to keep executing the <b>edit</b> command when editing more than one attribute.    
+	- <b>Cons</b>: Possibly slightly harder to implement. We now have to check if the user has provided at least one attribute to be edited. Also, we need to be able to efficiently extract the individual attributes from the user's input. However, this could be made easier by grouping and matching the attributes using <b>Java</b>'s <b>RegEx</b> patterns.           
+
+<br>  
 
 ### **5. Change Directory Command**   
 <div>  
@@ -455,13 +560,13 @@ The <b>change directory</b> command traverses the user up and down the <b>Direct
 The <b>change directory</b> command uses various methods from the <code>DirectoryTraverser</code> class in its execution. <br><br>
 If the user wants to traverse down to a <i>directory</i>, the <code>ChangeDirectoryCommand</code> will call <code>DirectoryTraverser#findNextDirectory(nextDirectoryName)</code> to get the <code>Directory</code> to traverse to. Then, <code>ChangeDirectoryCommand</code> will call <code>DirectoryTraverser#ftraverseDown(nextDirectory)</code> to move the user to that <i>directory</i>.<br><br>
 If the user want to traverse up from the current <i>directory</i> instead, <code>ChangeDirectoryCommand</code> will call <code>DirectoryTraverser#traverseUp()</code> to bring the user back to the <i>parent directory</i>.   
-</div> <br>  
+</div>     <br>  
 <div class="alert alert-info">  
 <i class="fa fa-info"></i> <b>Info</b> <br>   
 The <b>Root Directory</b> and the <b>File Directory</b> are the first and last <i>directories</i> in the <b>Directory Tree</b> respectively. If the user attempts to traverse down up the <b>Root Directory</b>, or traverse down a <b>File Directory</b>, an error message will be shown to the user instead. &#128550;
 </div> <br>   
 
-Shown below is the <i>sequence diagram</i> when a user executes the <b>change directory</b> command to traverse down to another <i>directory</i>.<br>    
+Shown below is the <i>sequence diagram</i> when a user executes the <b>change directory</b> command to traverse down to another <i>directory</i>.<br>
 ![change directory command sequence diagram](images/dg_cd_seq.png)    
  <span style="color: green"><small><i>Figure <b>Change Directory Command Sequence Diagram</b></i></small></span>   
 <br>   
@@ -476,26 +581,27 @@ Shown below is the <i>sequence diagram</i> when a user executes the <b>change di
 	- <b>Cons</b>: Much harder to implement as we need to consider how the split the String into individual <i>directory names</i>. Furthermore, we have to consider the case if the provided <i>directory name</i> contains <code>/</code>, and how we will implement a method to differentiate the <code>/</code> in the <i>name</i> from a <code>/</code> in the <i>directory path</i>.      
 
 <br>  
-
   
 ### **6. Open File Command**    
 <div>  
 The <b>open file</b> command opens up the <i>file(s)</i> of a <i>task</i> specified by the user. User can choose whether to open a single <i>file</i> in the <i>task</i>, or <b>all</b> the <i>files</i> in the <i>task</i>.  
 </div>   
-  
+
 #### **Implementation**     
 <div>
 The implementation of the <b>Open File</b> command uses two important <b>Java APIs</b> &ndash; <code>java.io.File</code> and <code>java.awt.Desktop</code>. The first <b>API</b> is responsible for operations involving file access, while the second <b>API</b> is used to open the file to the Desktop. <br><br>  
 
 The <code>OpenFile</code> class first obtains the list of <i>files</i> from the <i>task</i> to open via the <code>OpenFile#getFilesToOpen()</code> method. Then, <code>OpenFile</code> executes the <code>OpenFile#openFiles()</code> method to open each of the <i>files</i> in the list. 
-</div><br>   
+</div>   
 <div class="alert alert-info">  
 <i class="fa fa-info"></i> <b>Info</b> <br>   
 If there is an error opening a particular <i>file</i> in the list &#128534;, the opening process will not be terminated immediately. Instead, the application will continue to open the rest of the <i>files</i> in the list. <br>
 After it has gone through the list, it will then show the user the <i>files</i> that were not opened due to an error.
+<br><br>
+This is done by collecting the <i>file names</i> of the failed to open <i>files</i> into a String, and thereafter throw an <b>exception</b> with the String of </i>file names</i> as the message.
 </div> <br>   
     
-Below is a<i>sequence</i> diagram of how the <b>open file</b> command operates: <br>      
+Below is a <i>sequence</i> diagram of how the <b>open file</b> command operates:<br>   
 ![open file command sequence diagram](images/dg_open_file_seq.png)    
  <span style="color: green"><small><i>Figure <b>Open File Command Sequence Diagram</b></i></small></span>   
 
@@ -519,7 +625,7 @@ Below is a<i>sequence</i> diagram of how the <b>open file</b> command operates: 
 <div>  
 The <b>info</b> command shows the information of the <i>current directory</i> that the user is in. For example, when in the <b>Module</b> directory, the <b>info</b> command will show the <i>module code</i>, <i>module title</i> and the <i>module</i>'s <i>category list</i> to the user.  
 </div>  
-  
+
 <br>
 
 #### **Implementation**     
@@ -532,6 +638,7 @@ These information will eventually be shown to the user through the <code>Ui</cod
 The <i>sequence</i> diagram of what happens when a user executes the <b>info</b> command is as illustrated:<br>   
 ![info command sequence diagram](images/dg_info_seq.png)    
  <span style="color: green"><small><i>Figure <b>Info Command Sequence Diagram</b></i></small></span>   
+ 
 <br>  
 
 ### **8. Undo and Redo Commands**    
@@ -584,7 +691,7 @@ The process continues.
 <i class="fa fa-exclamation"></i> <b>Note</b> <br>   
 An error message will be shown to the user when the user tries to undo when no recent change was made, such as at the start of the application, and when the user tries to redo when nothing was recently undone. 
 <br><br>
-This is done in the <code>ScreenShotManager</code> class by checking if the <b>undo</b> stack contains more than 1 element (first element is the start-up state), and if the <b>redo</b> stack is not empty respectively. If checking fails, an exception will be thrown. &#128529;
+This is done in the <code>ScreenShotManager</code> class by checking if the <b>undo</b> stack contains more than 1 element (first element is the start-up state), and if the <b>redo</b> stack is not empty respectively. If checking fails, an <b>exception</b> will be thrown. &#128529;
 </div>    
 
 Below is a <i>sequence diagram</i> of the undo command in action: <br>   
@@ -603,7 +710,8 @@ Below is a <i>sequence diagram</i> of the undo command in action: <br>
 - <b>Alternative 3</b>: User can undo any number of times <b>(current implementation)</b>   
 	- <b>Pros</b>: Allows user the freedom to undo any number of times <i>(until the initial state, of course)</i>.   
 	- <b>Cons</b>: May require more memory to save the many number of states, although it may not be very significant considering the data size of each state tend to be very small (states are saved as a String).   
-<br>    
+
+<br>
 
 <b>How undo and redo executes</b>  
 - <b>Alternative 1</b>: Saves the state of the entire <i>directory list</i> <b>(current implementation)</b>           
