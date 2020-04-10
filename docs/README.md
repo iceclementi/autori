@@ -467,7 +467,7 @@ Now, Peter wishes to delete <i>modules</i> <b>CS1231</b> and <b>CS2102</b>. He e
 The <b>Nuke</b> <code>Parser</code> will parse the input as a <b>delete module</b> command. The <code>DeleteModuleCommand</code> class is instantiated and executed. The class will first filter <i>modules</i> containing the <i>keyword</i> "<b>cs</b>". This is done by the <code>FilterCommand#createFilteredModuleList()</code> method. Then, <code>DeleteModuleCommand</code> will call its own <code>executeInitialDelete(filteredList)</code> method to prepare the prompt to ask Peter to choose which <i>modules</i> he would like to delete. 
 </div>
 <br>
-The <i>sequence diagram</i> for <b>stage</b> <big style="color: green">&#10102;</big>:<br>   
+The <i>sequence diagram</i> for <b>stage</b> <big><big style="color: green">&#10102;</big></big>:<br>   
 
 ![delete command sequence diagram](images/dg_delete_seq.png)  
  <span style="color: green"><small><i>Figure <b>Delete Command Sequence Diagram 1</b></i></small></span>   
@@ -497,22 +497,20 @@ Enter the list number(s) of the modules to delete.
 <br>
 <div>
 He then proceeds to enter the corresponding  list numbers <code>1 3</code> to delete  <i>modules</i> <b>CS1231</b> and <b>CS2102</b>.  
-
-<br>  
+<br>  <br>
 <div class="alert alert-warning">  
 <i class="fa fa-exclamation"></i> <b>Note</b> <br>   
-Since there are <b>multiple</b> matches,  the application will first request for the user to choose the <i>directories</i> he wants to delete. If there is only a <b>single</b> match, this stage is skipped, and the application will continue at <b>stage</b> <big style="color: green">&#10104;</big>
+Since there are <b>multiple</b> matches,  the application will first request for the user to choose the <i>directories</i> he wants to delete. If there is only a <b>single</b> match, this stage is skipped, and the application will continue at <b>stage</b> <big><big style="color: green">&#10104;</big></big>
 </div>   
 <br>
-After the <code>Parser</code> has parsed the list numbers, the <code>ListNumberPrompt</code> class is constructed. <code>ListNumberPrompt</code> will prepare the prompt for the delete confirmation, and then calls its <code>executePromptConfirmation(filteredList, MODULE)</code> method.
-</div>
+After the <code>Parser</code> has parsed the list numbers, the <code>ListNumberPrompt</code> class is constructed. <code>ListNumberPrompt</code> will prepare the prompt for the delete confirmation, and then calls its <code>executePromptConfirmation(filteredList, MODULE)</code> method.  
+</div>   
 
-This is the <i>sequence diagram</i> for <b>stage</b> <big style="color: green">&#10103;</big>:<br>   
+This is the <i>sequence diagram</i> for <b>stage</b> <big><big style="color: green">&#10103;</big></big>:<br>   
 
 ![prompt command sequence diagram](images/dg_prompt_seq.png)  
  <span style="color: green"><small><i>Figure <b>Delete Command Sequence Diagram 2</b></i></small></span>   
 
-</div>
 <div>
 <big><big><big><big><big style="color: green">&#10104;</big></big></big></big></big>
 Peter receives the confirmation prompt: 
@@ -530,17 +528,47 @@ He enters <code>yes</code> to confirm the deletion.
 At the backend, the <code>Parser</code> will parse the confirmation, and constructs the <code>DeleteConfirmationPrompt</code> class. After getting the list of <i>modules</i> to delete, <code>DeleteConfirmationPrompt</code> then calls <code>executeMultipleDelete(filteredList, MODULE)</code> to delete Peter's selected <i>modules</i> from his <b>Module List</b>.  
 </div>   
 
-Below is the <i>sequence diagram</i> for <b>stage</b> <big style="color: green">&#10104;</big>:<br>   
+Below is the <i>sequence diagram</i> for <b>stage</b> <big><big style="color: green">&#10104;</big></big>:<br>   
 
 ![confirm command sequence diagram](images/dg_confirm_seq.png)  
  <span style="color: green"><small><i>Figure <b>Delete Command Sequence Diagram 3</b></i></small></span>   
 
 <br>
 <div>
-Peter receives the final message:
-<pre><code>SUCCESS!! Module(s) have been deleted.</code></pre>  
+Peter receives the final message:  
+</div>
+
+```
+SUCCESS!! Module(s) have been deleted.
+```
+
+<div>
 and the delete process ends.  
 </div>
+<br>   
+  
+[Back To Top](#table-of-contents)    
+
+#### **Design Considerations**     
+<b>Filtering for Deletion</b>    
+- <b>Alternative 1</b>: Do not allow filtering for deleting <i>directories</i>       
+	- <b>Pros</b>: Easy to implement. We would only have to check if the <i>directory</i> exists, and then delete it from its respective list.     
+	- <b>Cons</b>: Multiple deletions would not be supported. User has to delete one <i>directory</i> at a time, and can be tedious, especially if the user wants to delete several <i>directories</i> with the similar names.     
+- <b>Alternative 2</b>: Allow filtering for deleting <i>directories</i> <b>(current implementation)</b>         
+	- <b>Pros</b>: User can delete multiple <i>directories</i> at the same time with ease. This is especially useful when deleting <i>directories</i> with similar names, such as deleting a set of <i>tasks</i> with <i>descriptions</i> starting with "<b>tutorial</b>".     
+	- <b>Cons</b>: Relatively harder to implement. &#128551;     
+<br>
+
+<b>Prompts for Deletion</b>  
+- <b>Alternative 1</b>: No prompts for deletion       
+	- <b>Pros</b>: Easy to implement. Deletion process will be fast! &#128513; Simply search for the <i>directories</i> and then delete them.
+	- <b>Cons</b>: The user may accidentally delete the <b>wrong</b> <i>directory</i>! &#128561; <small><i>(although may still be undone with the <b>undo</b> command)</i></small> This is made worse if a wrong deletion is made during <b>multiple</b> deletions. 
+- <b>Alternative 2</b>: Prompts are enabled <b>(current implementation)</b>    
+	- <b>Pros</b>: User has another chance to choose to confirm the deletion. &#128517; This reduce the chance of accidental deletions happening.
+	- <b>Cons</b>: Deletion process is now longer. The user has to go through another layer of confirmation despite being sure that he he deleting the correct <i>directories</i> <small>(but who knows?)</small>. Moreover, we will have a harder time to implement the <b>delete</b> command, since it has now become multi-staged. Considerations have to be made to counter scenarios with <b>zero</b>, <b>one</b> or <b>more</b> matches after filtering. We will also have to consider how the <code>Parser</code> will be able to recognise if the user's input is a regular command, or an input corresponding to a prompt for list number, or a prompt for delete confirmation.  
+  
+  <br>
+[Back To Top](#table-of-contents)    
 
 <br><br>
 
